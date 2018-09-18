@@ -4,11 +4,12 @@ import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
 
-import './app.css'
+import AppStyle from './app.css.js'
+import "./global.css";
 
 const App = () => (
   <Router>
-    <div>
+    <AppStyle>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
@@ -17,7 +18,7 @@ const App = () => (
       <div className="content">
         <Routes />
       </div>
-    </div>
+    </AppStyle>
   </Router>
 )
 
