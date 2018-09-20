@@ -5,6 +5,7 @@ const matter = require("gray-matter");
 
 import { ServerStyleSheet } from "styled-components";
 import React, { Component } from "react";
+
 function getPosts() {
   const items = [];
   // Walk ("klaw") through posts directory and push file paths into items array //
@@ -48,7 +49,9 @@ function getPosts() {
 }
 
 export default {
-  preact: false,
+  preact: true,
+  extractCssChunks: true,
+  inlineCss: true,
   siteRoot: "https://gifted-visvesvaraya-60b56c.netlify.com",
   webpack: (config, { stage }) => {
     if (stage === "prod") {
@@ -69,7 +72,7 @@ export default {
         component: "src/containers/Home"
       },
       {
-        path: "/about",
+        path: "/a-propos",
         component: "src/containers/About"
       },
       {
@@ -94,8 +97,11 @@ export default {
   },
   renderToHtml: (render, Comp, meta) => {
     const sheet = new ServerStyleSheet();
+    // The styles are collected from each page component
     const html = render(sheet.collectStyles(<Comp />));
+    // The collected page styles are stored in `meta`
     meta.styleTags = sheet.getStyleElement();
+    // Return the html string for the page
     return html;
   },
   Document: class CustomHtml extends Component {
@@ -109,6 +115,11 @@ export default {
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1"
+            />
+
+            <link
+              href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600"
+              rel="stylesheet"
             />
             {renderMeta.styleTags}
           </Head>

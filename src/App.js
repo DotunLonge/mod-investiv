@@ -1,25 +1,23 @@
-import React from 'react'
-import { Router, Link } from 'react-static'
-import { hot } from 'react-hot-loader'
+import React from "react";
+import { Router } from "react-static";
+import { hot } from "react-hot-loader";
 //
-import Routes from 'react-static-routes'
+import Routes from "react-static-routes";
 
-import AppStyle from './app.css.js'
 import "./global.css";
+import "./myGrid.css";
+
+import Navbar from "./shared-components/navbar";
 
 const App = () => (
   <Router>
-    <AppStyle>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </nav>
-      <div className="content">
+    <div className="content">
+      <Navbar />
+      <div className="xs-12">
         <Routes />
       </div>
-    </AppStyle>
+    </div>
   </Router>
-)
+);
 
-export default hot(module)(App)
+export default hot(module)(App);
