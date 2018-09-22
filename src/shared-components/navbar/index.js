@@ -1,16 +1,26 @@
 import React from "react";
-import NavbarStyle, { Fade } from "./navbar.style";
+import NavbarStyle from "./navbar.style";
+// Fade
 import { NavLink } from "react-static";
 
 import logoPlain from "../../assets/logo.plain.svg";
 import universal from "react-universal-component";
 
-const BigScreenNavbar = universal(import(`./big`));
-const SmallScreenNavbar = universal(import(`./small`));
-const Hamburger = universal(import(`./hamburger`));
+import Hamburger from "./hamburger";
+
+const BigScreenNavbar = universal(import(`./big`), {
+  loading: () => null
+});
+const SmallScreenNavbar = universal(import(`./small`), {
+  loading: () => null
+});
+
+// const Hamburger = universal(import(`./hamburger`), {
+//   loading: () => null
+// });
+// Hamburger.preload();
 
 BigScreenNavbar.preload();
-Hamburger.preload();
 SmallScreenNavbar.preload();
 
 class Navbar extends React.PureComponent {

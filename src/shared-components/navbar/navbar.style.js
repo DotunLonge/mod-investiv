@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const Fade = styled.div`
-  background: ${props => (props.showSideMenu ? "whitesmoke" : "transparent")};
-  height: calc(100vh - 90px);
-  transition: 150ms;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 90px;
-  bottom: 0;
-  z-index: ${props => (props.showSideMenu ? "10" : "-10000")};
-`;
+// export const Fade = styled.div`
+//   background: ${props => (props.showSideMenu ? "whitesmoke" : "transparent")};
+//   height: calc(100vh - 90px);
+//   transition: 150ms;
+//   position: fixed;
+//   right: 0;
+//   left: 0;
+//   top: 90px;
+//   bottom: 0;
+//   z-index: ${props => (props.showSideMenu ? "10" : "-10000")};
+// `;
 
 export default styled.nav`
   #logo-link {

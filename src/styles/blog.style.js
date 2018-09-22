@@ -63,9 +63,9 @@ export default styled.div`
         color: #009444;
       }
       p {
-        line-height: 24px;
-        font-size: 14px;
-
+        line-height: 26px;
+        font-size: 15px;
+        font-weight: 300;
         color: #3d4851;
       }
       img {

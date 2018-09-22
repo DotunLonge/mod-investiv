@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import universal from "react-universal-component";
 import { Head } from "react-static";
 
-let ServiceWrapper = universal(import("./wrapper.js"));
+let ServiceWrapper = universal(import("./wrapper.js"), {
+  loading: () => null
+});
 ServiceWrapper.preload();
 
 import p_four from "../../assets/p_four.png";

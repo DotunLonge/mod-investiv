@@ -8,8 +8,12 @@ import "./global.css";
 import "./myGrid.css";
 import universal from "react-universal-component";
 
-const Navbar = universal(import(`./shared-components/navbar`));
-const Footer = universal(import(`./shared-components/footer`));
+const Navbar = universal(import(`./shared-components/navbar`), {
+  loading: () => null
+});
+const Footer = universal(import(`./shared-components/footer`), {
+  loading: () => null
+});
 
 Navbar.preload();
 Footer.preload();
