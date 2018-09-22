@@ -30,7 +30,7 @@ export default () => {
             de votre exploitation ou d’un projet agricole.
           </p>
           <div className="xs-12 t-c">
-            <img src={p_four} />
+            <img src={p_four} className="fit" />
           </div>
 
           <p>

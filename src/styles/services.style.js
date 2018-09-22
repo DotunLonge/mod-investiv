@@ -2,6 +2,11 @@ import styled from "styled-components";
 import servicebackground from "../assets/servicebackground.png";
 
 export default styled.div`
+
+.fit{
+  width: 100%;
+    object-fit: contain;
+}
   .nav-container {
     background: #fafafa;
   }

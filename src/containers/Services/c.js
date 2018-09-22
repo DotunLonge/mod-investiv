@@ -29,7 +29,7 @@ export default () => {
             agricole donnée et de prendre votre envol tout seul par la suite.
           </p>
           <div className="xs-12 t-c">
-            <img src={p_three} />
+            <img src={p_three} className="fit" />
           </div>
 
           <p>

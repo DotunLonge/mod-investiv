@@ -252,8 +252,16 @@ export default styled.div`
     }
 
     img {
+
+      @media(min-width: 768px){
+        width: 90%;
+      }
+
+      @media(max-width: 767px){
+        width: 100%;
+      }
+      
       height: 400px;
-      width: 90%;
       object-fit: cover;
       object-position: top;
       margin: auto;

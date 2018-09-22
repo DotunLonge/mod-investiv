@@ -41,7 +41,7 @@ export default () => {
           </p>
 
           <div className="xs-12 t-c">
-            <img src={p_one} />
+            <img src={p_one} className="fit" />
           </div>
 
           <h3> Objectifs </h3>
