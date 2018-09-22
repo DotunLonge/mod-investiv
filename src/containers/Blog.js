@@ -4,8 +4,7 @@ import BlogStyle from "../styles/blog.style";
 
 import right_arrow from "../assets/right-arrow.svg";
 
-let truncate = string =>
-  string.length > 200 ? string.substring(0, 200) + "..." : string;
+import { truncate } from "../helpers/utils";
 
 export default withRouteData(({ posts }) => (
   <BlogStyle className="xs-12">

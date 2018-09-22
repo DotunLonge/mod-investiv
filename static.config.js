@@ -48,6 +48,26 @@ function getPosts() {
   return getFiles();
 }
 
+function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 export default {
   extractCssChunks: true,
   inlineCss: true,
@@ -113,7 +133,12 @@ export default {
           path: `/post/${post.data.slug}`,
           component: "src/containers/Post",
           getData: () => ({
-            post
+            post,
+            similar: shuffle(posts).filter((p, i) => {
+              if (p.data.slug !== post.data.slug) {
+                return i < 2;
+              }
+            })
           })
         }))
       },
@@ -144,7 +169,6 @@ export default {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
-
             <link
               href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600"
               rel="stylesheet"

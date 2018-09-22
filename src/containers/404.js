@@ -22,7 +22,7 @@ export default () => (
       <div className="c t-c">
         <div className="xs-10 xs-off-1">
           <h1>404</h1>
-          <h3> Oh no's! We couldn't find that page :(</h3>
+          <h3> Oh no! We couldn't find that page :(</h3>
         </div>
       </div>
     </div>

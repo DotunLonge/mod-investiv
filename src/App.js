@@ -13,6 +13,7 @@ const Footer = universal(import(`./shared-components/footer`));
 
 Navbar.preload();
 Footer.preload();
+
 const App = () => (
   <Router>
     <div className="content">

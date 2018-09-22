@@ -1,8 +1,14 @@
 import styled from "styled-components";
-import servicebackground from "../assets/servicebackground.png";
+import blogbackground from "../assets/blogbackground.png";
 
 export default styled.div`
+.black{
+  color: #222829 !important;
+}
 
+.top{
+  margin-top: 3em;
+}
   .image{
    width: 100%;
    object-fit: cover;
@@ -14,7 +20,7 @@ export default styled.div`
 
   .withBackground {
     position: relative;
-    background: url(${servicebackground});
+    background: url(${blogbackground});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

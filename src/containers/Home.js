@@ -32,7 +32,9 @@ import p_one from "../assets/p_one.png";
 import p_two from "../assets/p_two.png";
 import p_three from "../assets/p_three.png";
 import p_four from "../assets/p_four.png";
-import home from "./home.json";
+import home from "../json/home.json";
+
+import { truncate } from "../helpers/utils";
 
 class Home extends React.Component {
   state = {
@@ -44,9 +46,6 @@ class Home extends React.Component {
       loaded: true
     });
   };
-
-  truncate = string =>
-    string.length > 200 ? string.substring(0, 200) + "..." : string;
 
   render() {
     const { loaded } = this.state,
@@ -368,7 +367,7 @@ class Home extends React.Component {
                   <img className="image" src={post.data.thumbnail} alt="" />
                   <div className="inner-inner">
                     <h3>{post.data.title}</h3>
-                    <p>{this.truncate(post.content)}</p>
+                    <p>{truncate(post.content)}</p>
 
                     <NavLink to={`/nos-actualités/post/${post.data.slug}`}>
                       Lire la suite <img src={right_arrow} className="arrow" />
