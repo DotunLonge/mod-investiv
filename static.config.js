@@ -148,7 +148,7 @@ export default {
       }
     ];
   },
-  renderToHtml: (render, Comp, meta) => {
+  renderToHtml: async (render, Comp, meta) => {
     const sheet = new ServerStyleSheet();
     // The styles are collected from each page component
     const html = render(sheet.collectStyles(<Comp />));
@@ -172,6 +172,10 @@ export default {
               href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600"
               rel="stylesheet"
             />
+
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+            <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
             {renderMeta.styleTags}
           </Head>
           <Body>{children}</Body>
