@@ -10,7 +10,7 @@ export default styled.div`
   top: 90px;
   bottom: 0;
   z-index: ${props => (props.showSideMenu ? "11" : "-10000")};
-  height: calc(100vh - 90px);
+  height: ${props => (props.showSideMenu ? "auto" : "0")};
 
   #small-screen-nav {
     position: relative;

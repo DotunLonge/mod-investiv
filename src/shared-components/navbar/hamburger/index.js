@@ -1,5 +1,4 @@
 import React from "react";
-// import Hamwrap from "./ham.style";
 
 export default ({ showSideMenu, onClick }) => {
   let isActive = showSideMenu === true ? "is-active" : "";

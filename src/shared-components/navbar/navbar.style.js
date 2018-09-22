@@ -18,7 +18,15 @@ export default styled.nav`
     display: inline-block;
     width: auto;
   }
+
   height: 90px;
+  position: fixed;
+  background: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 
   #right-menu {
     height: 90px;

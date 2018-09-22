@@ -6,16 +6,21 @@ import Routes from "react-static-routes";
 
 import "./global.css";
 import "./myGrid.css";
+import universal from "react-universal-component";
 
-import Navbar from "./shared-components/navbar";
+const Navbar = universal(import(`./shared-components/navbar`));
+const Footer = universal(import(`./shared-components/footer`));
 
+Navbar.preload();
+Footer.preload();
 const App = () => (
   <Router>
     <div className="content">
       <Navbar />
-      <div className="xs-12">
+      <div className="xs-12 push-down">
         <Routes />
       </div>
+      <Footer />
     </div>
   </Router>
 );

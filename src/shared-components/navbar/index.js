@@ -59,53 +59,55 @@ class Navbar extends React.PureComponent {
     const { isBigScreen, showSideMenu } = this.state;
 
     return (
-      <NavbarStyle className="xs-10 xs-off-1">
-        <Fade showSideMenu={showSideMenu} />
+      <NavbarStyle className="xs-12">
+        <div className="xs-10 xs-off-1">
+          {/* <Fade showSideMenu={showSideMenu} /> */}
 
-        {isBigScreen ? (
-          <React.Fragment>
-            <div className="xs-12 sm-5">
-              <li className="xs-12" id="logo-li">
-                <div className="c-w">
-                  <div className="c">
-                    <div className="xs-10">
-                      <NavLink to="/" id="logo-link">
-                        <img src={logoPlain} alt="logo-plain" id="logo" />
-                      </NavLink>
+          {isBigScreen ? (
+            <React.Fragment>
+              <div className="xs-12 sm-3">
+                <li className="xs-12" id="logo-li">
+                  <div className="c-w">
+                    <div className="c">
+                      <div className="xs-10">
+                        <NavLink to="/" id="logo-link">
+                          <img src={logoPlain} alt="logo-plain" id="logo" />
+                        </NavLink>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </div>
-            <BigScreenNavbar className="xs-12 sm-7" />
-          </React.Fragment>
-        ) : (
-          <React.Fragment>
-            <div className="xs-12">
-              <li className="xs-12" id="logo-li">
-                <div className="c-w">
-                  <div className="c">
-                    <div className="xs-9 l">
-                      <NavLink to="/" id="logo-link">
-                        <img src={logoPlain} alt="logo-plain" id="logo" />
-                      </NavLink>
-                    </div>
-                    <div className="xs-3 show-1023 r">
-                      <Hamburger
-                        onClick={this.triggerSideMenu}
-                        showSideMenu={showSideMenu}
-                      />
+                </li>
+              </div>
+              <BigScreenNavbar className="xs-12 sm-9" />
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <div className="xs-12">
+                <li className="xs-12" id="logo-li">
+                  <div className="c-w">
+                    <div className="c">
+                      <div className="xs-9 l">
+                        <NavLink to="/" id="logo-link">
+                          <img src={logoPlain} alt="logo-plain" id="logo" />
+                        </NavLink>
+                      </div>
+                      <div className="xs-3 show-1023 r">
+                        <Hamburger
+                          onClick={this.triggerSideMenu}
+                          showSideMenu={showSideMenu}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </div>
-            <SmallScreenNavbar
-              showSideMenu={showSideMenu}
-              dismiss={this.triggerSideMenu}
-            />
-          </React.Fragment>
-        )}
+                </li>
+              </div>
+              <SmallScreenNavbar
+                showSideMenu={showSideMenu}
+                dismiss={this.triggerSideMenu}
+              />
+            </React.Fragment>
+          )}
+        </div>
       </NavbarStyle>
     );
   }

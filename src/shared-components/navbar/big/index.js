@@ -19,11 +19,11 @@ export default class BigScreenNavbar extends React.PureComponent {
                 <NavLink to="/nos-actualités">Nos actualités</NavLink>
               </li>
               <li className="sm">
-                <NavLink to="/s'identifier"> S'identifier</NavLink>
+                <NavLink to="#"> Suivre mon projet</NavLink>
               </li>
               <li className="sm">
-                <NavLink to="/s'inscrire" className="btn">
-                  S'inscrire
+                <NavLink to="#" className="btn">
+                  Contactez nous
                 </NavLink>
               </li>
             </div>

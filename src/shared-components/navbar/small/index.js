@@ -24,13 +24,13 @@ export default ({ showSideMenu, dismiss }) => {
           </li>
 
           <li className="xs-12">
-            <NavLink to="/s'identifier" onClick={dismiss}>
-              S'identifier
+            <NavLink to="#" onClick={dismiss}>
+              Suivre mon projet
             </NavLink>
           </li>
           <li className="xs-12">
-            <NavLink to="/s'inscrire" className="btn" onClick={dismiss}>
-              S'inscrire
+            <NavLink to="#" className="btn" onClick={dismiss}>
+              Contactez nous
             </NavLink>
           </li>
         </div>

@@ -17,6 +17,10 @@ body,
   object-position: center;
 }
 
+.relative {
+  position: relative;
+}
+
 /*!
 * Hamburgers
 * @description Tasty CSS-animated hamburgers
@@ -24,6 +28,16 @@ body,
 * @site https://jonsuh.com/hamburgers
 * @link https://github.com/jonsuh/hamburgers
 */
+
+.push-down {
+  margin-top: 90px;
+}
+.arrow {
+  height: 26px !important;
+  width: 17px !important;
+  object-fit: contain !important;
+  object-position: 0px 15px !important;
+}
 .hamburger {
   display: inline-block;
   cursor: pointer;

@@ -684,8 +684,25 @@ input:invalid {
 }
 
 @media (min-width: 768px) {
+  .r-bg {
+    text-align: right !important;
+  }
+}
+
+.f-r {
+  float: right !important;
+}
+.f-l {
+  float: left !important;
+}
+
+@media (min-width: 768px) {
   .show-768 {
     display: none !important;
+  }
+
+  .hide-768 {
+    display: show !important;
   }
 }
 
@@ -699,6 +716,10 @@ input:invalid {
   .show-768 {
     display: block !important;
   }
+
+  .hide-768 {
+    display: none !important;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -708,4 +729,13 @@ input:invalid {
 }
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.i {
+  height: 100%;
+  width: 100%;
+}
+
+.i-h {
+  height: 100%;
 }

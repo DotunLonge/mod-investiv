@@ -49,7 +49,6 @@ function getPosts() {
 }
 
 export default {
-  preact: true,
   extractCssChunks: true,
   inlineCss: true,
   siteRoot: "https://gifted-visvesvaraya-60b56c.netlify.com",
@@ -62,21 +61,50 @@ export default {
     return config;
   },
   getSiteData: () => ({
-    title: "Investiv Group | Home"
+    siteTitle: "Investiv Group | Home"
   }),
   getRoutes: async () => {
     const posts = await getPosts();
+    const reversed = posts.reverse();
+
     return [
       {
         path: "/",
-        component: "src/containers/Home"
+        component: "src/containers/Home",
+        getData: () => ({
+          posts: reversed.filter((p, i) => {
+            return i < 3;
+          })
+        })
       },
       {
         path: "/a-propos",
         component: "src/containers/About"
       },
       {
-        path: "/blog",
+        path: "/nos-services/",
+        component: "src/containers/Services/a"
+      },
+      {
+        path: "/nos-services/" + "cartographie-aérienne-par-drone",
+        component: "src/containers/Services/a"
+      },
+      {
+        path: "/nos-services/" + "diagnostic-phytosanitaire-par-drone",
+
+        component: "src/containers/Services/b"
+      },
+      {
+        path: "/nos-services/" + "gestion-intelligente-d’exploitation-agricole",
+        component: "src/containers/Services/c"
+      },
+      {
+        path: "/nos-services/" + "assistance-technique",
+        component: "src/containers/Services/d"
+      },
+
+      {
+        path: "/nos-actualités",
         component: "src/containers/Blog",
         getData: () => ({
           posts
