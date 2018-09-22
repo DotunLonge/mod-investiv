@@ -106,6 +106,9 @@ class Home extends React.Component {
             onLoad={this.onLoad}
             height="500px"
             className="xs-12"
+            style={{
+              visibility: loaded ? "visible" : "hidden"
+            }}
           />
 
           <div className="xs-10 xs-off-1 sm-10 sm-off-1" id="conseil">

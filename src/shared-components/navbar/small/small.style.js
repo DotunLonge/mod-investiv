@@ -22,7 +22,7 @@ export default styled.div`
     ${props =>
       props.showSideMenu &&
       `
- box-shadow:   0px 9px 24px -8px #ececec;
+    box-shadow: 0px 9px 24px -8px #232323;
     border-top: 1px solid ${borderColor};
     `};
 

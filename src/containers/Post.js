@@ -17,16 +17,6 @@ const Post = ({ post, similar }) => (
       <title>Investiv Group | Blog - {post.data.title}</title>
     </Head>
 
-    {/*
-    <div className="xs-12 withBackground">
-      <div className="c-w relative">
-        <div className="c t-c">
-          <h3> {post.data.title} </h3>
-        </div>
-      </div>
-    </div>
-*/}
-
     <div className="xs-12 content">
       <div className="xs-10 xs-off-1 sm-8 sm-off-2">
         <div className="xs-12 t-c">
