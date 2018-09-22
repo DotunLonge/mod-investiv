@@ -6,6 +6,11 @@ export default styled.div`
   color: #222829 !important;
 }
 
+img{
+  width: 100%;
+  object-fit: contain;
+}
+
 .top{
   margin-top: 3em;
 }
