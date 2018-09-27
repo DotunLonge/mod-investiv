@@ -4,6 +4,7 @@ let count = 5;
 let linkheight = 68;
 let totalheight = count * linkheight;
 let borderColor = "#f7f7f7";
+
 export default styled.div`
   position: fixed;
   right: 0;

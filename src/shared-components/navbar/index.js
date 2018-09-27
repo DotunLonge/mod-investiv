@@ -14,12 +14,6 @@ const BigScreenNavbar = universal(import(`./big`), {
 const SmallScreenNavbar = universal(import(`./small`), {
   loading: () => null
 });
-
-// const Hamburger = universal(import(`./hamburger`), {
-//   loading: () => null
-// });
-// Hamburger.preload();
-
 BigScreenNavbar.preload();
 SmallScreenNavbar.preload();
 
