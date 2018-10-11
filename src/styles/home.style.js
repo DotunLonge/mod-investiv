@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from "../assets/background.poor.png";
+import backgroundclean from "../assets/background.clean.png";
 
 export default styled.div`
   #up {
@@ -20,7 +21,29 @@ export default styled.div`
   width: auto;
 
   .header {
-    padding: 3em 0 6em;
+    
+    padding: 4em 0 6em;
+    background: url(${backgroundclean});
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .c-w{
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
 
     a{
       margin: .5em 0;
@@ -31,7 +54,7 @@ export default styled.div`
       line-height: normal;
       font-size: 32px;
       text-align: center;
-      color: #222829;
+      color: white;
       font-weight: 600;
       margin-top: 0.8em;
       margin-bottom: 0.8em;
@@ -44,7 +67,7 @@ export default styled.div`
       line-height: 27px;
       font-size: 18px;
       text-align: center;
-      color: #3d4851;
+      color: white;
       margin-bottom: 3em;
     }
   }
@@ -53,13 +76,11 @@ export default styled.div`
   .btn-inverse {
     height: 50px;
     line-height: 50px;
-
     min-width: 80%;
     padding: 0 1em;
     font-size: 17px;
     text-decoration: none;
     border-radius: 4px;
-
     display: inline-block;
   }
 
@@ -68,9 +89,9 @@ export default styled.div`
     background: #009444;
   }
   .btn-inverse {
-    color: #009444;
-    border: 1px solid #009444;
-    background: white;
+    color: #ACBB15;
+    border: 1px solid #ACBB15;
+    background: transparent;
   }
 
   @media (min-width: 768px) {
@@ -124,7 +145,6 @@ export default styled.div`
     background: #009444;
     padding: 2.5em 0;
     position: relative;
-    top: -5em;
 
     h2,
     h4 {
@@ -313,6 +333,13 @@ export default styled.div`
 
   #just-more-logos {
     padding: 3em 0;
+    p{
+      font-family: Work Sans;
+      line-height: 20px;
+      font-size: 13px;
+      padding: 0 10%;
+      color: #3D4851;
+    }
     h4 {
       font-style: normal;
       font-weight: 600;

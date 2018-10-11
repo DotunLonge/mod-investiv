@@ -24,6 +24,12 @@ import mlogo4 from "../assets/more-logos/logo_d-min.png";
 import mlogo5 from "../assets/more-logos/logo_e-min.png";
 import mlogo6 from "../assets/more-logos/logo_f-min.png";
 
+import plogo1 from "../assets/prix/a.png";
+import plogo2 from "../assets/prix/b.png";
+import plogo3 from "../assets/prix/c.png";
+import plogo4 from "../assets/prix/d.png";
+import plogo5 from "../assets/prix/e.png";
+
 import coffee from "../assets/coffee.png";
 
 import right_arrow from "../assets/right-arrow.svg";
@@ -56,6 +62,7 @@ class Home extends React.Component {
         <Head>
           <title> Investiv Group | Home Page</title>
         </Head>
+
         <section className="xs-12 header">
           <div className="c-w">
             <div className="c t-c">
@@ -86,32 +93,8 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section
-          className={`xs-12  ${loaded ? "loaded" : "not-loaded"}`}
-          id="hasBackgroundImage"
-        >
-          <div className="pre xs-12">
-            {loaded === false && (
-              <div className="c-w" id="up">
-                <div className="c t-c">
-                  <Loading />
-                </div>
-              </div>
-            )}
-          </div>
-
-          <img
-            src={Background}
-            id="actual-background"
-            onLoad={this.onLoad}
-            height="500px"
-            className="xs-12"
-            style={{
-              visibility: loaded ? "visible" : "hidden"
-            }}
-          />
-
-          <div className="xs-10 xs-off-1 sm-10 sm-off-1" id="conseil">
+        <section className="xs-12" id="hasBackgroundImage">
+          <div className="xs-12" id="conseil">
             <div className="t-c">
               <h2 className="xs-10 xs-off-1">
                 Conseil en agriculture de précision
@@ -405,6 +388,40 @@ class Home extends React.Component {
           </div>
           <div className="xs-12 sm-6 coffee-h">
             <img src={coffee} />
+          </div>
+        </section>
+
+        <section className="xs-12" id="just-more-logos">
+          <div className="xs-12">
+            <h4> Prix ​​de concours </h4>
+            <div className="xs-10 xs-off-1 sm-11">
+              <div className="xs-6 sm-4 md-2">
+                <img src={plogo1} className="xs-12 md-11" />
+                <p>Grand prix de la bpc du patronnat Ivoirien 2017</p>
+              </div>
+              <div className="xs-6 sm-4 md-2">
+                <img src={plogo2} className="xs-12 md-11" />
+                <p>Prix de la fondation Tony Elumelu 2017</p>
+              </div>
+              <div className="xs-6 sm-4 md-3">
+                <img src={plogo3} className="xs-12 md-11" />
+                <p>
+                  3ème prix au forum des start-up de l’école polytechnique de
+                  Paris en 2018
+                </p>
+              </div>
+              <div className="xs-6 sm-4 md-2">
+                <img src={plogo4} className="xs-12 md-11" />
+                <p>Prix du district d’Abidjan 2017</p>
+              </div>
+              <div className="xs-6 sm-4 md-2">
+                <img src={plogo5} className="xs-12 md-11" />
+                <p>
+                  1er Prix au forum de la BAD sur les jeunes agriculteurs
+                  (Agripitch) en 2018
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </HomeStyle>
