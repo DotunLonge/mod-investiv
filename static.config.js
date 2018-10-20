@@ -71,7 +71,7 @@ function shuffle(array) {
 export default {
   extractCssChunks: true,
   inlineCss: true,
-  siteRoot: "https://gifted-visvesvaraya-60b56c.netlify.com",
+  siteRoot: "https://flamboyant-jepsen-07a122.netlify.com",
   webpack: (config, { stage }) => {
     if (stage === "prod") {
       config.entry = ["babel-polyfill", config.entry];
