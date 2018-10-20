@@ -50,7 +50,7 @@ export default styled.div`
         background: #ffffff;
         box-shadow: 0px 4px 25px rgba(61, 72, 81, 0.05);
         border-radius: 4px;
-        min-height: 530px;
+        min-height: 590px;
 
         .inner-inner {
           padding: 1.25em;
