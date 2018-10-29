@@ -39,7 +39,7 @@ export default class Footer extends React.Component {
               </li>
             </ul>
           </div>
-          <div className="xs-12 md-4">
+          <div className="xs-12 md-4" id="contactezNous">
             <h4>CONTACTEZ NOUS</h4>
             <form className="xs-12">
               <div className="xs-12 form-group">

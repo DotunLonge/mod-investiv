@@ -76,7 +76,7 @@ class Home extends React.Component {
               <div className="xs-10 xs-off-1 sm-8 sm-off-2 md-6 md-off-3">
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-r">
-                    <NavLink to="#" className="btn">
+                    <NavLink to="#contactezNous" className="btn">
                       Contactez nous
                     </NavLink>
                   </div>
