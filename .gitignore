@@ -7,6 +7,9 @@
 # production
 /dist
 
+#devserver
+/tmp
+
 # misc
 .DS_Store
 .env.local
