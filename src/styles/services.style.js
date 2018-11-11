@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import servicebackground from "../assets/servicebackground.png";
+import servicebackground from "../assets/servicebackground.jpeg";
 
 export default styled.div`
 

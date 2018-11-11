@@ -1,7 +1,7 @@
 import React from "react";
 import { withSiteData, NavLink, withRouteData, Head } from "react-static";
 import HomeStyle from "../styles/home.style";
-import Background from "../assets/background.clean.png";
+import Background from "../assets/background.clean.jpeg";
 import Loading from "../shared-components/loader";
 
 import icon_a from "../assets/icon_a.svg";
@@ -30,14 +30,14 @@ import plogo3 from "../assets/prix/c.png";
 import plogo4 from "../assets/prix/d.png";
 import plogo5 from "../assets/prix/e.png";
 
-import coffee from "../assets/coffee.png";
+import coffee from "../assets/coffee.jpeg";
 
 import right_arrow from "../assets/right-arrow.svg";
-import p_one from "../assets/p_one.png";
+import p_one from "../assets/p_one.jpeg";
 
-import p_two from "../assets/p_two.png";
-import p_three from "../assets/p_three.png";
-import p_four from "../assets/p_four.png";
+import p_two from "../assets/p_two.jpeg";
+import p_three from "../assets/p_three.jpeg";
+import p_four from "../assets/p_four.jpeg";
 import home from "../json/home.json";
 
 import { truncate } from "../helpers/utils";

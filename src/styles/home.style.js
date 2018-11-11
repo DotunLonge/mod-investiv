@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import background from "../assets/background.poor.png";
-import backgroundclean from "../assets/background.clean.png";
+import backgroundclean from "../assets/background.clean.jpeg";
 
 export default styled.div`
   #up {

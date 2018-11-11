@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import servicebackground from "../assets/aboutbackground.png";
+import servicebackground from "../assets/aboutbackground.jpeg";
 
 export default styled.div`
 .top{

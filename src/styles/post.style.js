@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import blogbackground from "../assets/blogbackground.png";
+import blogbackground from "../assets/blogbackground.jpeg";
 
 export default styled.div`
 .black{
