@@ -2,11 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { polyfillLoader } from 'polyfill-io-feature-detection';
 // This function load polyfills only if needed. By default it uses polyfill.io
-polyfillLoader({
-  "features": "IntersectionObserver",
-  "onCompleted": main
-});
-
+if (typeof window !== "undefined") {
+    polyfillLoader({
+      "features": "IntersectionObserver",
+      "onCompleted": main
+    });
+} else {
+    main();
+}
 // Your top level component
 import App from "./App";
 
