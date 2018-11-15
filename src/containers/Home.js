@@ -1,5 +1,7 @@
 import React from "react";
 import { withSiteData, NavLink, withRouteData, Head } from "react-static";
+import { LazyImage } from "react-lazy-images";
+
 import HomeStyle from "../styles/home.style";
 import Background from "../assets/background.clean.jpeg";
 import Loading from "../shared-components/loader";
@@ -183,7 +185,11 @@ class Home extends React.Component {
 
             <div className="xs-12 m">
               <div className="xs-12 sm-6 l show-768">
-                <img src={p_one} alt="drone" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={p_one} alt="drone" />
               </div>
 
               <div className="xs-12 sm-6">
@@ -199,13 +205,21 @@ class Home extends React.Component {
               </div>
 
               <div className="xs-12 sm-6 r-bg hide-768">
-                <img src={p_one} alt="drone" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={p_one} alt="drone" />
               </div>
             </div>
 
             <div className="xs-12 m">
               <div className="xs-12 sm-6 l">
-                <img src={p_two} alt="drone" className="" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={p_two} alt="drone" className="" />
               </div>
 
               <div className="xs-12 sm-6">
@@ -223,7 +237,11 @@ class Home extends React.Component {
 
             <div className="xs-12 m">
               <div className="xs-12 sm-6 l show-768">
-                <img src={p_three} alt="drone" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={p_three} alt="drone" />
               </div>
 
               <div className="xs-12 sm-6">
@@ -239,13 +257,21 @@ class Home extends React.Component {
               </div>
 
               <div className="xs-12 sm-6 r-bg hide-768 ">
-                <img src={p_three} alt="drone" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={p_three} alt="drone" />
               </div>
             </div>
 
             <div className="xs-12 m">
               <div className="xs-12 sm-6 l">
-                <img src={p_four} alt="drone" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={p_four} alt="drone" />
               </div>
 
               <div className="xs-12 sm-6">
@@ -282,34 +308,66 @@ class Home extends React.Component {
               <div className="xs-10 xs-off-1 bunch">
                 <div className="xs-12">
                   <div className="xs-4">
-                    <img height="100px" width="100%" src={logo1} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="100px" width="100%" src={logo1} />
                   </div>
                   <div className="xs-4">
-                    <img height="100px" width="100%" src={logo2} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="100px" width="100%" src={logo2} />
                   </div>
                   <div className="xs-4">
-                    <img height="100px" width="100%" src={logo3} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="100px" width="100%" src={logo3} />
                   </div>
                 </div>
 
                 <div className="xs-12">
                   <div className="xs-4">
-                    <img height="100px" width="100%" src={logo4} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="100px" width="100%" src={logo4} />
                   </div>
                   <div className="xs-4">
-                    <img height="100px" width="100%" src={logo5} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="100px" width="100%" src={logo5} />
                   </div>
                   <div className="xs-4">
-                    <img height="100px" width="100%" src={logo6} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="100px" width="100%" src={logo6} />
                   </div>
                 </div>
 
                 <div className="xs-12">
                   <div className="xs-4">
-                    <img height="200px" width="100%" src={logo7} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="200px" width="100%" src={logo7} />
                   </div>
                   <div className="xs-4">
-                    <img height="200px" width="100%" src={logo8} />
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="200px" width="100%" src={logo8} />
                   </div>
                 </div>
               </div>
@@ -322,23 +380,47 @@ class Home extends React.Component {
             <h4> En vedette dans </h4>
             <div className="xs-10 xs-off-1 ">
               <div className="xs-6 sm-4 md-2">
-                <img src={mlogo1} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={mlogo1} className="xs-12 md-11" />
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={mlogo2} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={mlogo2} className="xs-12 md-11" />
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={mlogo3} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={mlogo3} className="xs-12 md-11" />
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={mlogo4} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={mlogo4} className="xs-12 md-11" />
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={mlogo5} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={mlogo5} className="xs-12 md-11" />
               </div>
 
               <div className="xs-6 sm-4 md-2">
-                <img src={mlogo6} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={mlogo6} className="xs-12 md-11" />
               </div>
             </div>
           </div>
@@ -350,13 +432,21 @@ class Home extends React.Component {
             {posts.map(post => (
               <div className="xs-12 sm-4 post-card" key={post.data.slug}>
                 <div className="xs-12 sm-11 inner">
-                  <img className="image" src={post.data.thumbnail} alt="" />
+                  <LazyImage
+                  placeholder={({imageProps, ref}) => (
+                    <div className="imgPlaceholder" ref={ref} />)}
+                  actual={({imageProps}) => (<img {...imageProps}/>)}
+                  className="image" src={post.data.thumbnail} alt="" />
                   <div className="inner-inner">
                     <h3>{post.data.title}</h3>
                     <p>{truncate(post.content)}</p>
 
                     <NavLink to={`/nos-actualités/post/${post.data.slug}`}>
-                      Lire la suite <img src={right_arrow} className="arrow" />
+                      Lire la suite <LazyImage
+                      placeholder={({imageProps, ref}) => (
+                        <div className="imgPlaceholder" ref={ref} />)}
+                      actual={({imageProps}) => (<img {...imageProps}/>)}
+                      src={right_arrow} className="arrow" />
                     </NavLink>
                   </div>
                 </div>
@@ -387,7 +477,11 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="xs-12 sm-6 coffee-h">
-            <img src={coffee} />
+            <LazyImage
+            placeholder={({imageProps, ref}) => (
+              <div className="imgPlaceholder" ref={ref} />)}
+            actual={({imageProps}) => (<img {...imageProps}/>)}
+            src={coffee} />
           </div>
         </section>
 
@@ -396,26 +490,46 @@ class Home extends React.Component {
             <h4> Prix ​​de concours </h4>
             <div className="xs-10 xs-off-1 sm-11">
               <div className="xs-6 sm-4 md-2">
-                <img src={plogo1} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={plogo1} className="xs-12 md-11" />
                 <p>Grand prix de la bpc du patronnat Ivoirien 2017</p>
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={plogo2} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={plogo2} className="xs-12 md-11" />
                 <p>Prix de la fondation Tony Elumelu 2017</p>
               </div>
               <div className="xs-6 sm-4 md-3">
-                <img src={plogo3} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={plogo3} className="xs-12 md-11" />
                 <p>
                   3ème prix au forum des start-up de l’école polytechnique de
                   Paris en 2018
                 </p>
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={plogo4} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={plogo4} className="xs-12 md-11" />
                 <p>Prix du district d’Abidjan 2017</p>
               </div>
               <div className="xs-6 sm-4 md-2">
-                <img src={plogo5} className="xs-12 md-11" />
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={plogo5} className="xs-12 md-11" />
                 <p>
                   1er Prix au forum de la BAD sur les jeunes agriculteurs
                   (Agripitch) en 2018
