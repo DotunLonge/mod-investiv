@@ -5,6 +5,11 @@ import icon_c from "../assets/about/icon_c.svg";
 import { Head } from "react-static";
 import about from "../json/about.json";
 
+const teamReq = require.context('../assets/team/', false);
+const getTeamPic = link => link.startsWith('http') ? link : teamReq('./' + `${link}`);
+const teamPics = Object.keys(about).reduce(
+  (acc, newEl) => ({...acc, [newEl]: about[newEl].map((e) => getTeamPic(e.link))}), {});
+
 export default () => {
   return (
     <AboutStyle className="xs-12">
@@ -102,7 +107,7 @@ export default () => {
               return (
                 <div className="xs-12 sm-6 md-4 info-card" key={i}>
                   <div className="inner">
-                    <img src={p.link} />
+                    <img src={teamPics.equip[i]} />
                     <h4>{p.name}</h4>
                     <p>{p.title}</p>
                   </div>
@@ -122,7 +127,7 @@ export default () => {
               return (
                 <div className="xs-12 sm-6 md-4 info-card" key={i}>
                   <div className="inner">
-                    <img src={p.link} />
+                    <img src={teamPics.technologies[i]} />
                     <h4>{p.name}</h4>
                     <p>{p.title}</p>
                   </div>
@@ -142,7 +147,7 @@ export default () => {
               return (
                 <div className="xs-12 sm-6 md-4 info-card" key={i}>
                   <div className="inner">
-                    <img src={p.link} />
+                    <img src={teamPics.admins[i]} />
                     <h4>{p.name}</h4>
                     <p>{p.title}</p>
                   </div>
@@ -162,7 +167,7 @@ export default () => {
               return (
                 <div className="xs-12 sm-6 md-4 info-card" key={i}>
                   <div className="inner">
-                    <img src={p.link} />
+                    <img src={teamPics.drone[i]} />
                     <h4>{p.name}</h4>
                     <p>{p.title}</p>
                   </div>

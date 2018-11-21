@@ -3,29 +3,29 @@ export default {
     {
       name: "Aboubakar Karim",
       title: "CEO",
-      link: "http://placehold.it/200"
+      link: "Aboubakar.jpeg"
     },
     {
       name: "Olivier Konan",
       title: "Chargé de projet, agriculture de précision",
-      link: "http://placehold.it/200"
+      link: "Olivier.jpeg"
     },
     {
       name: "Fabrice N’guettia",
       title: "Superviseur d’exploitations agricole",
-      link: "http://placehold.it/200"
+      link: "Fabrice.jpeg"
     },
     {
       name: "Bakary Coulibaly",
       title: "Consultant en agronomie",
-      link: "http://placehold.it/200"
+      link: "Bakary.jpeg"
     }
   ],
   technologies: [
     {
       name: "Aymard Dion",
       title: "ICT manager",
-      link: "http://placehold.it/200"
+      link: "Aymard.jpeg"
     },
     {
       name: "Mohamed K Coulibali",
@@ -42,17 +42,17 @@ export default {
     {
       name: "Amadou Toure",
       title: "Responsable des opèrations",
-      link: "http://placehold.it/200"
+      link: "Amadou.jpeg"
     },
     {
       name: "Marianne Coulibaly",
       title: "Responsable administrative et financière",
-      link: "http://placehold.it/200"
+      link: "Marianne.jpeg"
     },
     {
       name: "Daniel Lamarche",
       title: "Consultant juridique et en développement des affaires",
-      link: "http://placehold.it/200"
+      link: "Daniel.jpeg"
     },
     {
       name: "Serge Assande",
@@ -64,22 +64,22 @@ export default {
     {
       name: "Aboubakar Karim",
       title: "Pilote",
-      link: "http://placehold.it/200"
+      link: "Aboubakar.jpeg"
     },
     {
       name: "Aymard Dion",
       title: "Pilote",
-      link: "http://placehold.it/200"
+      link: "Aymard.jpeg"
     },
     {
       name: "Fabrice N’guettia",
       title: "Pilote",
-      link: "http://placehold.it/200"
+      link: "Fabrice.jpeg"
     },
     {
       name: "Olivier Konan",
       title: "Pilote",
-      link: "http://placehold.it/200"
+      link: "Olivier.jpeg"
     }
   ]
 };

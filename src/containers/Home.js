@@ -492,7 +492,7 @@ class Home extends React.Component {
 
         <section className="xs-12" id="just-more-logos">
           <div className="xs-12">
-            <h4> Prix ​​de concours </h4>
+            <h4> Prix ​​et distinctions </h4>
             <div className="xs-10 xs-off-1 sm-11">
               <div className="xs-6 sm-4 md-2">
                 <LazyImage
