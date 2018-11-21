@@ -12,8 +12,77 @@ import logo2 from "../../assets/footer-logos/smartphone.svg";
 import logo3 from "../../assets/footer-logos/phone.svg";
 import logo4 from "../../assets/footer-logos/whatsapp.svg";
 
+import request from 'superagent';
+
+const contactURL = process.env.REACT_STATIC_ENV === 'development' ?
+  '//localhost:8000/jsoncontact/' :
+  '//v1.investivgroup.com/jsoncontact/';
+
 export default class Footer extends React.Component {
+  constructor(props){
+    super(props);
+    this.nom = React.createRef();
+    this.prenom = React.createRef();
+    this.email = React.createRef();
+    this.message = React.createRef();
+    this.honeypot = React.createRef();
+    this.state = {
+      contactStatus: ''
+    }
+  }
+  
+  onContactChange = () => {
+    this.setState({contactStatus: ''});
+  };
+
+  envoyerMessage = (event) => {
+    event.preventDefault();
+    if (this.honeypot.current.value) return;
+    let data = {
+      'full_name': this.nom.current.value.trim(),
+      'email': this.email.current.value.trim(),
+      'message': this.message.current.value.trim()
+    };
+    this.setState({'contactStatus': 'submitting'});
+    const post = () => {
+      request.post(contactURL)
+      .send(data)
+      .set('X-CSRFToken', this.csrf_token)
+      .set('Accept', 'application/json')
+      .then(res => {
+        if (res.body.success) this.setState({'contactStatus': 'submitted'});
+        else this.setState({'contactStatus': 'failed'});
+      })
+      .catch(err => this.setState({'contactStatus': 'failed'}))
+    };
+    post();
+  };
+
   render() {
+    let btnSubmitText = this.state.contactStatus === 'submitting' ?
+      'Envoi en cours...' :
+      this.state.contactStatus === 'failed' ?
+      'Réessayez plus tard.' :
+      this.state.contactStatus === 'submitted' ?
+      'Merci! Nous avons reçu votre message.' :
+      'Envoyer';
+    let btnSubmitColors = {
+      submitting: {
+        color: 'initial',
+        background: 'initial'
+      },
+      failed: {
+        color: 'white',
+        background: '#ef6c00'
+      },
+      submitted: {
+        background: '#8bc34a',
+        color: 'white'
+      }
+    };
+    let btnSubmitStyle = {...btnSubmitColors[this.state.contactStatus]};
+    let btnSubmitDisabled = this.state.contactStatus === 'submitting';
+
     return (
       <FooterStyle className="xs-12">
         <div className="xs-10 xs-off-1">
@@ -41,29 +110,50 @@ export default class Footer extends React.Component {
           </div>
           <div className="xs-12 md-4" id="contactezNous">
             <h4>CONTACTEZ NOUS</h4>
-            <form className="xs-12">
+            <form onSubmit={this.envoyerMessage} className="xs-12">
               <div className="xs-12 form-group">
-                <input className="xs-12" name="name" placeholder="Prénom" />
+                <input className="xs-12" required ref={this.nom} name="name" placeholder="Nom"
+                  onChange={this.onContactChange} />
               </div>
 
               <div className="xs-12 form-group">
                 <input
                   className="xs-12"
+                  ref={this.email}
+                  required
+                  type="email"
                   name="email"
                   placeholder="Adresse e-mail"
+                  onChange={this.onContactChange}
                 />
               </div>
 
               <div className="xs-12 form-group">
                 <textarea
                   className="xs-12"
+                  ref={this.message}
+                  required
                   name="message"
                   placeholder="Votre message"
+                  onChange={this.onContactChange}
                 />
               </div>
 
+              <div className="xs-12 hide">
+                <input 
+                  type="text"
+                  placeholder="Ne remplissez pas ce champ"
+                  ref={this.honeypot}
+                  name="check_human"/>
+              </div>
+
               <div className="xs-12 form-group">
-                <input type="submit" name="Envoyer" value="Envoyer" />
+                <input 
+                  type="submit"
+                  name="Envoyer"
+                  style={btnSubmitStyle}
+                  disabled={btnSubmitDisabled}
+                  value={btnSubmitText} />
               </div>
             </form>
           </div>

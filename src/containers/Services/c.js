@@ -7,7 +7,7 @@ let ServiceWrapper = universal(import("./wrapper.js"), {
 });
 ServiceWrapper.preload();
 
-import p_three from "../../assets/p_three.png";
+import p_three from "../../assets/p_three.clean.jpeg";
 
 export default () => {
   return (
