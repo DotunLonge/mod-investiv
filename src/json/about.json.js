@@ -12,7 +12,7 @@ export default {
     },
     {
       name: "Fabrice N’guettia",
-      title: "Superviseur d’exploitations agricole",
+      title: "Superviseur d’exploitations agricoles",
       link: "Fabrice.jpeg"
     },
     {
@@ -41,7 +41,7 @@ export default {
   admins: [
     {
       name: "Amadou Toure",
-      title: "Responsable des opèrations",
+      title: "Responsable des opérations",
       link: "Amadou.jpeg"
     },
     {
