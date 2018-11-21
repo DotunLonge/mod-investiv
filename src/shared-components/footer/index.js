@@ -99,10 +99,10 @@ export default class Footer extends React.Component {
               </li>
 
               <li className="xs-12">
-                <NavLink to={suiviURL}>Suivre mon projet</NavLink>
+                <a href={suiviURL} target="_blank">Suivre mon projet</a>
               </li>
               <li className="xs-12">
-                <NavLink to="#contactezNous">Contactez nous</NavLink>
+                <a href="#contactezNous">Contactez nous</a>
               </li>
             </ul>
           </div>
@@ -110,7 +110,7 @@ export default class Footer extends React.Component {
             <h4>CONTACTEZ NOUS</h4>
             <form onSubmit={this.envoyerMessage} className="xs-12">
               <div className="xs-12 form-group">
-                <input className="xs-12" required ref={e => this.nom = e} name="name" placeholder="Nom"
+                <input id="contact.nom" className="xs-12" required ref={e => this.nom = e} name="name" placeholder="Nom"
                   onChange={this.onContactChange} />
               </div>
 

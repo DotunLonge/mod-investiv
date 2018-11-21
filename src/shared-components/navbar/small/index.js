@@ -28,14 +28,14 @@ export default ({ showSideMenu, dismiss }) => {
           </li>
 
           <li className="xs-12">
-            <NavLink to={suiviURL} onClick={dismiss}>
+            <a href={suiviURL} onClick={dismiss}>
               Suivre mon projet
-            </NavLink>
+            </a>
           </li>
           <li className="xs-12">
-            <NavLink to="#contactezNous" className="btn" onClick={dismiss}>
+            <a href="#contactezNous" className="btn" onClick={dismiss}>
               Contactez nous
-            </NavLink>
+            </a>
           </li>
         </div>
       </SmallScreen>

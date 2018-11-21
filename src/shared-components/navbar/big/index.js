@@ -26,9 +26,9 @@ export default class BigScreenNavbar extends React.PureComponent {
                 <NavLink to={suiviURL} target="_blank"> Suivre mon projet</NavLink>
               </li>
               <li className="sm">
-                <NavLink to="#contactezNous" className="btn">
+                <a href="#contactezNous" className="btn">
                   Contactez nous
-                </NavLink>
+                </a>
               </li>
             </div>
           </div>

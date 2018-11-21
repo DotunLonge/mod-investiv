@@ -83,16 +83,16 @@ class Home extends React.Component {
               <div className="xs-10 xs-off-1 sm-8 sm-off-2 md-6 md-off-3">
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-r">
-                    <NavLink to="#contactezNous" className="btn">
+                    <a href="#contactezNous" className="btn" onClick={() => document.getElementById('contact.nom').focus()}>
                       Contactez nous
-                    </NavLink>
+                    </a>
                   </div>
                 </div>
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-l">
-                    <NavLink to={suiviURL} target="_blank" className="btn-inverse">
+                    <a href={suiviURL} target="_blank" className="btn-inverse">
                       Suivre mon projet
-                    </NavLink>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -474,7 +474,7 @@ class Home extends React.Component {
                   <NavLink
                     className="btn-inverse"
                     id="nous"
-                    to="/contactez-nous"
+                    to="#contactezNous"
                   >
                     Contactez nous
                   </NavLink>
