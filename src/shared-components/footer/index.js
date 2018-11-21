@@ -202,22 +202,22 @@ export default class Footer extends React.Component {
             <div className="xs-12 md-6 f-r">
               <div className="xs-12 md-8 md-off-4">
                 <div className="xs-3">
-                  <a href="#" target="_blank">
+                  <a href="https://www.facebook.com/investivgroup/" target="_blank">
                     <img src={facebook} />
                   </a>
                 </div>
                 <div className="xs-3">
-                  <a href="#" target="_blank">
+                  <a href="https://twitter.com/investivgroup" target="_blank">
                     <img src={twitter} />
                   </a>
                 </div>
                 <div className="xs-3">
-                  <a href="#" target="_blank">
+                  <a href="https://www.youtube.com/channel/UCfRxKICObOqIsztHFQwlpxQ" target="_blank">
                     <img src={youtube} />
                   </a>
                 </div>
                 <div className="xs-3">
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/company/investivgroup/" target="_blank">
                     <img src={linkedin} />
                   </a>
                 </div>

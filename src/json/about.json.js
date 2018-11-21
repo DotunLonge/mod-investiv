@@ -57,7 +57,7 @@ export default {
     {
       name: "Serge Assande",
       title: "Consultant en finance",
-      link: "http://placehold.it/200"
+      link: "Ochou.jpeg"
     }
   ],
   drone: [

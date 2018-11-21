@@ -153,13 +153,13 @@ export default () => {
               <li>
                 <img src={check} />
                 <span>
-                  Une carte DSM (Digital Surface Model) de la parcelle
+                  Une carte MNT (Modèle Numérique de Terrain) de la parcelle
                 </span>
               </li>
 
               <li>
                 <img src={check} />
-                <span>Une carte DSM superposée sur plan satellite</span>
+                <span>Une carte MNT superposée sur plan satellite</span>
               </li>
 
               <li>
