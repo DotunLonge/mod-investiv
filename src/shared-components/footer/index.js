@@ -14,9 +14,12 @@ import logo4 from "../../assets/footer-logos/whatsapp.svg";
 
 import request from 'superagent';
 
+const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
+  '' :
+  'http://v1.investivgroup.com/suivi/';
 const contactURL = process.env.REACT_STATIC_ENV === 'development' ?
-  '//localhost:8000/jsoncontact/' :
-  '//v1.investivgroup.com/jsoncontact/';
+  'http://localhost:8000/jsoncontact/' :
+  'http://v1.investivgroup.com/jsoncontact/';
 
 export default class Footer extends React.Component {
   constructor(props){
@@ -96,10 +99,10 @@ export default class Footer extends React.Component {
               </li>
 
               <li className="xs-12">
-                <NavLink to="#">Suivre mon projet</NavLink>
+                <NavLink to={suiviURL}>Suivre mon projet</NavLink>
               </li>
               <li className="xs-12">
-                <NavLink to="#">Contactez nous</NavLink>
+                <NavLink to="#contactezNous">Contactez nous</NavLink>
               </li>
             </ul>
           </div>

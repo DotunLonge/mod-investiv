@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-static";
 
+const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
+  '' :
+  'http://v1.investivgroup.com/suivi/';
+
 export default class BigScreenNavbar extends React.PureComponent {
   render() {
     const { className } = this.props;
@@ -19,7 +23,7 @@ export default class BigScreenNavbar extends React.PureComponent {
                 <NavLink to="/nos-actualités">Nos actualités</NavLink>
               </li>
               <li className="sm">
-                <NavLink to="#"> Suivre mon projet</NavLink>
+                <NavLink to={suiviURL} target="_blank"> Suivre mon projet</NavLink>
               </li>
               <li className="sm">
                 <NavLink to="#contactezNous" className="btn">

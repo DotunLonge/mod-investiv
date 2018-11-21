@@ -46,7 +46,8 @@ import { truncate } from "../helpers/utils";
 
 const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
   '' :
-  '//v1.investivgroup.com/suivi/';
+  'http://v1.investivgroup.com/suivi/';
+console.log('environnement-courant:', process.env.REACT_STATIC_ENV);
 
 class Home extends React.Component {
   state = {
@@ -89,7 +90,7 @@ class Home extends React.Component {
                 </div>
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-l">
-                    <NavLink to={suiviURL} className="btn-inverse">
+                    <NavLink to={suiviURL} target="_blank" className="btn-inverse">
                       Suivre mon projet
                     </NavLink>
                   </div>

@@ -2,6 +2,10 @@ import React from "react";
 import { NavLink } from "react-static";
 import SmallScreen from "./small.style";
 
+const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
+  '' :
+  '//v1.investivgroup.com/suivi/';
+
 export default ({ showSideMenu, dismiss }) => {
   return (
     <React.Fragment>
@@ -24,12 +28,12 @@ export default ({ showSideMenu, dismiss }) => {
           </li>
 
           <li className="xs-12">
-            <NavLink to="#" onClick={dismiss}>
+            <NavLink to={suiviURL} onClick={dismiss}>
               Suivre mon projet
             </NavLink>
           </li>
           <li className="xs-12">
-            <NavLink to="#" className="btn" onClick={dismiss}>
+            <NavLink to="#contactezNous" className="btn" onClick={dismiss}>
               Contactez nous
             </NavLink>
           </li>
