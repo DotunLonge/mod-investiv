@@ -44,6 +44,10 @@ import home from "../json/home.json";
 
 import { truncate } from "../helpers/utils";
 
+const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
+  '' :
+  '//v1.investivgroup.com/suivi/';
+
 class Home extends React.Component {
   state = {
     loaded: false
@@ -85,7 +89,7 @@ class Home extends React.Component {
                 </div>
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-l">
-                    <NavLink to="#" className="btn-inverse">
+                    <NavLink to={suiviURL} className="btn-inverse">
                       Suivre mon projet
                     </NavLink>
                   </div>
@@ -261,7 +265,7 @@ class Home extends React.Component {
                 placeholder={({imageProps, ref}) => (
                   <div className="imgPlaceholder" ref={ref} />)}
                 actual={({imageProps}) => (<img {...imageProps}/>)}
-                src={p_three} alt="drone" />
+                src={p_three} alt="" />
               </div>
             </div>
 
@@ -271,7 +275,7 @@ class Home extends React.Component {
                 placeholder={({imageProps, ref}) => (
                   <div className="imgPlaceholder" ref={ref} />)}
                 actual={({imageProps}) => (<img {...imageProps}/>)}
-                src={p_four} alt="drone" />
+                src={p_four} alt="" />
               </div>
 
               <div className="xs-12 sm-6">
@@ -426,6 +430,7 @@ class Home extends React.Component {
           </div>
         </section>
 
+        {posts.length > 0 && 
         <section className="xs-12" id="blog">
           <h2 className="t-c">Dernières nouvelles sur notre blog</h2>
           <div className="xs-10 xs-off-1">
@@ -453,7 +458,7 @@ class Home extends React.Component {
               </div>
             ))}
           </div>
-        </section>
+        </section>}
 
         <section className="xs-12" id="coffee">
           <div className="xs-12 sm-6 coffee-h">
