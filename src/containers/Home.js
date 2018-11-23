@@ -18,6 +18,8 @@ import logo5 from "../assets/logos/logo_e-min.png";
 import logo6 from "../assets/logos/logo_f-min.png";
 import logo7 from "../assets/logos/logo_g-min.png";
 import logo8 from "../assets/logos/logo_h-min.png";
+import logo9 from "../assets/logos/logo_i-min.png";
+import logo10 from "../assets/logos/logo_j-min.png";
 
 import mlogo1 from "../assets/more-logos/logo_a-min.png";
 import mlogo2 from "../assets/more-logos/logo_b-min.png";
@@ -373,6 +375,20 @@ class Home extends React.Component {
                       <div className="imgPlaceholder" ref={ref} />)}
                     actual={({imageProps}) => (<img {...imageProps}/>)}
                     height="200px" width="100%" src={logo8} />
+                  </div>
+                  <div className="xs-4">
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="200px" width="100%" src={logo9} />
+                  </div>
+                  <div className="xs-4">
+                    <LazyImage
+                    placeholder={({imageProps, ref}) => (
+                      <div className="imgPlaceholder" ref={ref} />)}
+                    actual={({imageProps}) => (<img {...imageProps}/>)}
+                    height="200px" width="100%" src={logo10} />
                   </div>
                 </div>
               </div>
