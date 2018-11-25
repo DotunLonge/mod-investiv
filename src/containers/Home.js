@@ -76,7 +76,7 @@ class Home extends React.Component {
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Investiv: Révolutionner votre production" />
           <meta property="og:description" content="Modernisez vos opérations agricoles, augmentez vos rendements et gagnez du temps grâce à nos services d'agriculture de précision axés sur la technologie." />
-          <meta property="og:image" content="https://www.investivgroup.com/logo.png" />
+          <meta property="og:image" content="https://www.investivgroup.com/logo.v1.0.png" />
         </Head>
 
         <section className="xs-12 header">
