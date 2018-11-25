@@ -30,12 +30,12 @@ export default {
     {
       name: "Mohamed K Coulibali",
       title: "Consultant, développeur fullstack",
-      link: "http://placehold.it/200"
+      link: "Konoufo.jpg"
     },
     {
       name: "Hassan Kane",
       title: "Consultant en stratégie et en robotique",
-      link: "http://placehold.it/200"
+      link: "Hassan.jpg"
     }
   ],
   admins: [
