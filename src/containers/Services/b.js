@@ -47,7 +47,7 @@ export default () => {
           <h3> Objectifs </h3>
 
           <p>
-            La cartographie aérienne par drone présente les objectifs suivants:
+            Le diagonstic phytosanitaire par drone présente les objectifs suivants:
           </p>
 
           <ul id="objectives">
