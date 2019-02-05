@@ -468,8 +468,13 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+        <section className="xs-12" id="just-more-logos">
+          <div className="xs-12">
+            <h4> Gallery </h4>
+          </div>
+            </section>
 
-        {posts.length > 0 && 
+        {posts.length > 0 &&
         <section className="xs-12" id="blog">
           <h2 className="t-c">Dernières nouvelles sur notre blog</h2>
           <div className="xs-10 xs-off-1">
