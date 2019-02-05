@@ -468,11 +468,6 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        <section className="xs-12" id="just-more-logos">
-          <div className="xs-12">
-            <h4> Gallery </h4>
-          </div>
-            </section>
 
         {posts.length > 0 &&
         <section className="xs-12" id="blog">
@@ -587,6 +582,11 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+        <section className="xs-12" id="just-more-logos">
+          <div className="xs-12">
+            <h4> Gallery </h4>
+          </div>
+            </section>
       </HomeStyle>
     );
   }
