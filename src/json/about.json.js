@@ -23,7 +23,7 @@ export default {
   ],
   technologies: [
     {
-      name: "Aymard Dion",
+      name: "Stéphane Aymard Dion",
       title: "ICT manager",
       link: "Aymard.jpeg"
     },
