@@ -177,6 +177,7 @@ export default {
             <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
             {renderMeta.styleTags}
+            <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
           </Head>
           <Body>{children}</Body>
         </Html>
