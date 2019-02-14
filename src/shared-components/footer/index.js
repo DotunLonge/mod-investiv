@@ -110,7 +110,7 @@ export default class Footer extends React.Component {
             <h4>CONTACTEZ NOUS</h4>
             <form onSubmit={this.envoyerMessage} className="xs-12">
               <div className="xs-12 form-group">
-                <input id="contact.nom" className="xs-12" required ref={e => this.nom = e} name="name" placeholder="Nom"
+                <input id="contact.nom" className="xs-12" required={true} ref={e => this.nom = e} name="name" placeholder="Nom"
                   onChange={this.onContactChange} />
               </div>
 
@@ -118,7 +118,7 @@ export default class Footer extends React.Component {
                 <input
                   className="xs-12"
                   ref={e => this.email = e}
-                  required
+                  required={true}
                   type="email"
                   name="email"
                   placeholder="Adresse e-mail"
@@ -130,7 +130,7 @@ export default class Footer extends React.Component {
                 <textarea
                   className="xs-12"
                   ref={e => this.message = e}
-                  required
+                  required={true}
                   name="message"
                   placeholder="Votre message"
                   onChange={this.onContactChange}
