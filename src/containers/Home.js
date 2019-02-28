@@ -1,4 +1,8 @@
 import React from "react";
+import React from "react";
+import ReactDOM from "react-dom";
+import Gallery from "./Gallery";
+
 import { withSiteData, NavLink, withRouteData, Head } from "react-static";
 import { LazyImage } from "react-lazy-images";
 
