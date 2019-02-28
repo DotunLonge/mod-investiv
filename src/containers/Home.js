@@ -588,7 +588,6 @@ class Home extends React.Component {
         </section>
         <section className="xs-12" id="just-more-logos">
           <div className="xs-12">
-            <h4> Gallery </h4>
             </section>
       </HomeStyle>
     );
