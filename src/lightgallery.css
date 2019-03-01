@@ -35,7 +35,7 @@
 }
 .lg-actions .lg-next.disabled, .lg-actions .lg-prev.disabled {
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .lg-actions .lg-next:hover, .lg-actions .lg-prev:hover {
   color: #FFF;
