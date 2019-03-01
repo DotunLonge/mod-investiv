@@ -589,10 +589,10 @@ class Home extends React.Component {
         <section className="xs-12" id="just-more-logos">
           <div className="xs-12">
           <div id="lightgallery">
-            <a href="img/img1.jpg">
+            <a href="assets/p_one.jpeg">
                 <img src="img/thumb1.jpg" />
             </a>
-            <a href="img/img2.jpg">
+            <a href="assets/p_one.jpeg">
                 <img src="img/thumb2.jpg" />
             </a>
             ...
