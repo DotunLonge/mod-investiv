@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "PORT=3003 react-static start",
+	"winstart": "cmd /C \"set PORT=3003 && node_modules\\.bin\\react-static start\"",
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3003"
