@@ -12,7 +12,7 @@ import logo2 from "../../assets/footer-logos/smartphone.svg";
 import logo3 from "../../assets/footer-logos/phone.svg";
 import logo4 from "../../assets/footer-logos/whatsapp.svg";
 
-import request from 'superagent';
+import request from 'axios';
 
 const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
   '' :
@@ -43,12 +43,13 @@ export default class Footer extends React.Component {
     };
     this.setState({'contactStatus': 'submitting'});
     const post = () => {
-      request.post(contactURL)
-      .send(data)
-      .set('X-CSRFToken', this.csrf_token)
-      .set('Accept', 'application/json')
-      .then(res => {
-        if (res.body.success) this.setState({'contactStatus': 'submitted'});
+      request.post(contactURL, data, {
+        headers: {
+          'X-CSRFToken': this.csrf_token,
+          'Accept': 'application/json'
+        }
+      }).then(res => {
+        if (res.data.success) this.setState({'contactStatus': 'submitted'});
         else this.setState({'contactStatus': 'failed'});
       })
       .catch(err => this.setState({'contactStatus': 'failed'}))
