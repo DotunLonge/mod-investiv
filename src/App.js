@@ -6,7 +6,7 @@ import Routes from "react-static-routes";
 
 import "./global.css";
 import "./myGrid.css";
-import "./lightgallery.css";
+
 import universal from "react-universal-component";
 
 const Navbar = universal(import(`./shared-components/navbar`), {

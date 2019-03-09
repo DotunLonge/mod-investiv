@@ -1,7 +1,5 @@
 import React from "react";
-import React from "react";
 import ReactDOM from "react-dom";
-import Lightgallery from "./lightgallery";
 
 import { withSiteData, NavLink, withRouteData, Head } from "react-static";
 import { LazyImage } from "react-lazy-images";
@@ -585,21 +583,6 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-        </section>
-        <section className="xs-12" id="just-more-logos">
-          <div className="xs-12">
-          <div id="lightgallery">
-            <a href="assets/p_one.jpeg">
-                <img src="img/thumb1.jpg" />
-            </a>
-            <a href="assets/p_one.jpeg">
-                <img src="img/thumb2.jpg" />
-            </a>
-            ...
-          </div>
-          <script type="text/javascript">
-            lightGallery(document.getElementById('lightgallery'));
-          </script>
         </section>
       </HomeStyle>
     );
