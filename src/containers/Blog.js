@@ -26,8 +26,8 @@ export default withRouteData(({ posts }) => (
                 <h3>{post.data.title}</h3>
                 <p>{truncate(post.content)}</p>
 
-                {post.external ?
-                  <a href={post.link} target="_blank">
+                {post.data.external ?
+                  <a href={post.data.link} target="_blank">
                   Lire la suite <img src={right_arrow} className="arrow" />
                   </a> :
                   <NavLink to={`/nos-actualités/post/${post.data.slug}`}>
