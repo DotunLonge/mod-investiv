@@ -81,7 +81,7 @@ class Home extends React.Component {
   componentWillMount(){
     // this.props.addTranslation(frenchTranslations);
 
-    if(sessionStorage.getItem("isAuthenticated")){
+    if( typeof window !== 'undefined' && window.sessionStorage && window.sessionStorage.getItem("isAuthenticated")){
       this.temp = true;
       sessionStorage.clear();
     }
@@ -107,8 +107,8 @@ class Home extends React.Component {
   }
 
   componentWillUnmount(){
-    if(this.temp === true){
-      sessionStorage.setItem("isAuthenticated", "true");
+    if(this.temp === true && typeof window !== 'undefined'){
+      window && window.sessionStorage && window.sessionStorage.setItem("isAuthenticated", "true");
     }
   }
   

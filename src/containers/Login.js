@@ -65,10 +65,12 @@ class Login extends Component{
       method: "POST",
       data: this.state
     }).then(res=>{
-      if(sessionStorage){
+      if(typeof window !== 'undefined'){
+       if(window.sessionStorage && window.sessionStorage){
         sessionStorage.setItem("isAuthenticated", "true");
+       }
+        window.location.replace("/dashboard/gallery");
       }
-      window.location.replace("/dashboard/gallery");
     }).catch(res=>{
       this.setState({failed: true});
       this.clearId = setTimeout(()=>{

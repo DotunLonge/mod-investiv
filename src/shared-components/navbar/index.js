@@ -59,7 +59,7 @@ class Navbar extends React.PureComponent {
   }
 
   resizeEventListener = () => {
-    if (typeof window !== undefined) {
+    if (typeof window !== "undefined") {
       this.setState({
         isBigScreen: window.innerWidth > 1023
       });

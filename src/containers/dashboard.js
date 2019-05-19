@@ -4,7 +4,7 @@ import Uploader from '../shared-components/uploader';
 import Axios from 'axios';
 import Fa from 'react-fa';
 
-if(window){
+if(typeof window !== 'undefined'){
 window.UPLOADCARE_PUBLIC_KEY = 'bf05bbda3e81c8a4f261';
 }
 
@@ -75,7 +75,7 @@ width: 100vw;
 }
 `;
 
-if(sessionStorage){
+if(typeof window !== 'undefined' && window.sessionStorage && window.sessionStorage){
   if( sessionStorage.getItem("isAuthenticated") !== 'true' ){
     window.location.href = "/login";
   }
@@ -92,7 +92,7 @@ class AdminDashboard extends Component{
   }
 
   componentWillMount(){
-    if(window){
+    if(typeof window !== 'undefined'){
       if(window.location.href.includes("gallery")){
         this.fetchGalleryImages();     
         this.setState({view: 'gallery'});
@@ -189,7 +189,9 @@ class AdminDashboard extends Component{
   }  
 
   componentWillUnmount(){
-    sessionStorage.clear();
+    if(typeof window !== 'undefined'){
+      window.sessionStorage && window.sessionStorage.clear();
+    }
   }
 
   render(){
@@ -203,8 +205,10 @@ class AdminDashboard extends Component{
               <li><a href="/dashboard/team" onClick={()=>this.setView("team")} className={this.state.view === 'team' ? 'active':""}>Team</a></li>
               <li style={{float: 'right', marginRight: "2em"}}>
                 <button className='logout' onClick={()=>{
-                  sessionStorage.clear();
+                  if(typeof window !== 'undefined'){
+                  window.sessionStorage && window.sessionStorage.clear();
                   window.location.href = "/login"; 
+                  }
                 }}>Logout</button>
               </li>
              </div>  
@@ -230,7 +234,7 @@ class AdminDashboard extends Component{
                     method: "post",
                     data: { image: info.cdnUrl, uuid: info.uuid}
                   }).then(res=>{
-                    if(window){
+                    if(typeof window !== 'undefined'){
                       window.location.reload();
                     }
                     console.log('Upload completed:', res);                       
@@ -280,8 +284,10 @@ class AdminDashboard extends Component{
               <li><a href="/dashboard/team" className={this.state.view === 'team' ? 'active':""}>Team</a></li>
               <li style={{float: 'right', marginRight: "2em"}}>
                 <button className='logout' onClick={()=>{
-                  sessionStorage.clear();
-                  window.location.href = "/login"; 
+                  if(typeof window !== 'undefined'){
+                    window && window.sessionStorage && window.sessionStorage.clear();
+                    window.location.href = "/login"; 
+                  }
                 }}>Logout</button>
               </li>
             </div>  
@@ -307,7 +313,7 @@ class AdminDashboard extends Component{
                     method: "post",
                     data: { image: info.cdnUrl, uuid: info.uuid}
                   }).then(res=>{
-                    if(window){
+                    if(typeof window !== 'undefined'){
                       window.location.reload();
                     }
                     console.log('Upload completed:', res);                       
