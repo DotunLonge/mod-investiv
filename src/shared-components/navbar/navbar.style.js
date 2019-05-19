@@ -103,11 +103,12 @@ select.selector{
       padding: 0 1em;
     }
   }
-
-  .sm {
-    width: calc(100%/6);
-    &.unique{
-      padding: 0 1em;
+  @media(min-width: 1023px){
+    .sm {
+      width: calc(100%/6);
+      &.unique{
+        padding: 0 1em;
+      }
     }
   }
 

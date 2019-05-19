@@ -142,5 +142,5 @@ body,
 .image-gallery-thumbnail img{
   height: 6em;
   background: #dedede;
-
+  object-fit: contain;
 }

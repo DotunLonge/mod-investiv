@@ -14,9 +14,17 @@ export default styled.div`
   height: ${props => (props.showSideMenu ? "auto" : "0")};
 
   #small-screen-nav {
+    .sm.unique{
+      padding: 1em;   
+    }
+    
+    select.selector{
+      margin: 1em 0;
+    }
+    
     position: relative;
     transition: 450ms;
-    height: ${props => (props.showSideMenu ? `${totalheight}px` : "0%")};
+    height: ${props => (props.showSideMenu ? `450px` : "0%")};
     background: white;
     overflow: hidden;
     border-color: ${borderColor};

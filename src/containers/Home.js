@@ -63,7 +63,7 @@ const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
   'http://v1.investivgroup.com/suivi/';
 console.log('environnement-courant:', process.env.REACT_STATIC_ENV);
 
-let gallery_url = "http://localhost:4500/pictures";
+let gallery_url = "https://investiv.now.sh/pictures";
 
 class Home extends React.Component {
   constructor(props){

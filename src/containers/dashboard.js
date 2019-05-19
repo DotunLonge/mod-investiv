@@ -8,8 +8,8 @@ if(window){
 window.UPLOADCARE_PUBLIC_KEY = 'bf05bbda3e81c8a4f261';
 }
 
-let gallery_url = "http://localhost:4500/pictures";
-let team_url = "http://localhost:4500/team";
+let gallery_url = "https://investiv.now.sh/pictures";
+let team_url = "https://investiv.now.sh/team";
 
 const AdminWrapper = styled.div`
 nav{

@@ -7,7 +7,7 @@ const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
   '' :
   '//v1.investivgroup.com/suivi/';
 
-export default ({ showSideMenu, dismiss }) => {
+export default ({ showSideMenu, dismiss, children }) => {
   return (
     <React.Fragment>
       <SmallScreen className="xs-12 fade" showSideMenu={showSideMenu}>

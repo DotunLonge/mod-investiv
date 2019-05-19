@@ -21,15 +21,17 @@ const LanguageToggle = withLocalize(({ languages, activeLanguage, setActiveLangu
     </select>
   </li>
 ));
+
 const BigScreenNavbar = universal(import(`./big`), {
   loading: () => null
 });
+
 const SmallScreenNavbar = universal(import(`./small`), {
   loading: () => null
 });
+
 BigScreenNavbar.preload();
 SmallScreenNavbar.preload();
-
 
 class Navbar extends React.PureComponent {
   constructor(props) {
@@ -67,7 +69,7 @@ class Navbar extends React.PureComponent {
   triggerSideMenu = () =>
     this.setState(p => {
       return { showSideMenu: !p.showSideMenu };
-    });
+  });
 
   closeSideMenu = () => {
     this.setState({
@@ -86,12 +88,12 @@ class Navbar extends React.PureComponent {
 
     return (
       <NavbarStyle className="xs-12 navbar-sha">
-        <div className="xs-10 xs-off-1">
+        <div className="xs-11 xs-off-1 sm-11 sm-off-1 lg-10 lg-off-1">
           {/* <Fade showSideMenu={showSideMenu} /> */}
 
           {isBigScreen ? (
             <React.Fragment>
-              <div className="xs-12 sm-2">
+              <div className="xs-12 sm-1 md-2">
                 <li className="xs-12" id="logo-li">
                   <div className="c-w">
                     <div className="c">
@@ -104,7 +106,7 @@ class Navbar extends React.PureComponent {
                   </div>
                 </li>
               </div>
-              <BigScreenNavbar className="xs-12 sm-10" {...this.props}>
+              <BigScreenNavbar className="xs-12 sm-11 md-10" {...this.props}>
                 <LanguageToggle/>
               </BigScreenNavbar>
 

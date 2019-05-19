@@ -59,7 +59,7 @@ class Login extends Component{
 
   handleSubmit = e => {
     e.preventDefault();
-    let url = "http://localhost:4500/login";
+    let url = "https://investiv.now.sh/login";
     axios({
       url,
       method: "POST",
