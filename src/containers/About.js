@@ -71,12 +71,12 @@ export default () => {
           <p>
            <Translate id="about.p_one"/>           
           </p>
-          <p>
+          {/* <p>
           <Translate id="about.p_two"/>           
           </p>
           <p>
           <Translate id="about.p_three"/>           
-          </p>
+          </p> */}
         </div>
       </div>
 

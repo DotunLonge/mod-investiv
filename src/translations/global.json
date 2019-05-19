@@ -28,9 +28,9 @@
       "serviceThreeSub":["Produce without stress","Produisez sans stress"],
       "serviceThreeText":["We put at your disposal 'turnkey' plantations on which we accompany you on a specific number of cycles to help you identify all the contours of a given agricultural activity and take off by yourself. It is a package that we offer you in the setting up of your farm until the final marketing of your products. Throughout this process, we allow you to remotely follow the evolution of activities via our website.","Nous mettons à votre disposition des plantations « clé en main » sur lesquelles nous vous accompagnons sur un nombre de cycles déterminé afin de vous aider à cerner tous les contours d’une activité agricole donnée et de prendre votre envol tout seul par la suite. C’est un package que nous vous offrons dans la mise en place de votre exploitation jusqu’à la commercialisation finale de vos produits. Tout le long de ce processus, nous vous permettons de suivre à distance l’évolution des activités via notre site web."],
 
-      "serviceFour": ["Technical assistance in the implementation and monitoring of agricultural projects","Assistance technique dans la mise en oeuvre et le suivi de projets agricole"],
-      "serviceFourSub":["Start, plan and control","Commencez, planifier et controler"],
-      "serviceFourText":["The conduct of a farm is subject to several hazards and it is important to have a qualified team to carry out technical studies, technical audits, supervise the producers or make recommendations to improve the behavior of your farm. of an agricultural project. To meet all these concerns, we have developed a technical assistance service tailored to the realities of our customers to effectively meet their needs.","La conduite d’une exploitation agricole est soumise à plusieurs aléas et il est important d’avoir une équipe qualifiée pour réaliser des études techniques, des audits techniques, d’encadrer les producteurs ou de faire des recommandations pour améliorer la tenue de votre exploitation ou d’un projet agricole. Pour répondre à toutes ces préoccupations, nous avons développé un service d’assistance technique tailler sur mesure en fonction des réalités de nos clients afin de répondre efficacement à leurs besoins."],
+      "serviceFour": ["Aerial spray by drone","Pulvérisation aérienne par drone"],
+      "serviceFourSub":["Protect your crops like never before","Protéger vos cultures comme jamais auparavant"],
+      "serviceFourText":["Today and in the years to come, the issues at the agricultural level will be changing. It will be necessary to produce more on smaller areas, products of good qualities while respecting the environment.","Aujourd’hui et dans les années à venir, les enjeux au niveaux agricole seront en mutations. Il faudra produire davantage sur de plus petites superficies, des produits de bonnes qualités tout en respectant l’environnement. "],
 
       "someLogos": ["Our work has earned us the recognition of these trusted partners","Notre travail nous a valu la reconnaissance de ces partenaires de confiance"],
 
@@ -62,7 +62,7 @@
       "one":["Aerial mapping by drone","Cartographie aérienne par drone"],
       "two":["Phytosanitary diagnosis by drone","Diagnostic Phytosanitaire par drone"],
       "three":["Intelligent Farm Management","Gestion intelligente d’exploitation agricole"],
-      "four":["Technical assistance","Assistance technique"]
+      "four":["Aerial Spray By Drone ","Pulvérisation Aérienne Par Drone"]
       
     }
   },
@@ -95,6 +95,7 @@
     "deliverable_three":["A DEM (Digital Terrain Model) map of the parcel","Une carte MNT (Modèle Numérique de Terrain) de la parcelle"],
     "deliverable_four":["A map MNT superimposed on satellite map","Une carte MNT superposée sur plan satellite"],
     "deliverable_five":["Plan of development of the parcel (if it takes place)","Plan d’aménagement de la parcelle (s’il y’a lieu)"],
+    "deliverable_six":["Level curve and 3D modeling (if any)"," Courbe de niveau et modelisation 3D (s’il y’a lieu)"],
     
     "title": ["Investiv Group | Our Services - aerial aerial mapping","Investiv Group | Non Services - Cartographie aérienne par drone"],
     "heading":["Control the state and dimensions of your land","Maitrisez l’état et les dimensions de votre terrain"],
@@ -124,11 +125,13 @@
       "step_five":["Report delivery", "Livraison du rapport"],
       
       "deliverable_one":["Calculation of vegetation index and flowering rate","Calcul de l’indice de végétation et du taux de floraison"],
-      "deliverable_two":["Nitrogen fertilization map","Carte de fertilisation azotée"],
-      "deliverable_three":["Map of chlorophyll activity","Carte de l’activité chlorophyllienne"],
-      "deliverable_four":["Measuring crop density","Mesure de la densité de culture"],
-      "deliverable_five":["Estimation of biomass and yield","Estimation de la biomasse et du rendement"],
-      "deliverable_six":["Detection of disease areas","Détection des zones de maladies"],
+      "deliverable_two":["Soil fertility map","Carte de fertilité des sols"],
+      "deliverable_three":["Assessment of water stress","Évaluation du stress hydrique"],
+      "deliverable_four":["Map of chlorophyll activity","Carte de l’activité chlorophyllienne"],
+      "deliverable_five":["Measuring crop density","Mesure de la densité de culture"],
+      "deliverable_six":["Estimation of biomass and yield","Estimation de la biomasse et du rendement"],
+      "deliverable_seven":["Detection of disease areas","Détection des zones de maladies"],
+      "deliverable_eight":["Counting plants","Comptage des plants"],
       
       "heading":["Achieve performance levels above current standards","Atteignez des niveaux de performance supérieur aux standards actuels"],
       "paragraph_one":["In Côte d'Ivoire, 50% of agricultural losses are related to plant diseases. This high percentage is also valid in several countries of the West African sub-region. Today more than ever, it is essential to quickly identify outbreaks on plots in order to find adequate solutions to optimize production, prevent attacks and avoid production losses.","En Côte d’Ivoire, 50% des pertes agricoles sont liées aux maladies des plantes. Ce pourcentage élevé est aussi valable dans plusieurs pays de la sous-région Ouest-Africaine. Aujourd’hui plus que jamais, il est primordiale d’identifier rapidement les foyers de contaminations sur les parcelles afin de trouver des solutions adéquates en vue d’optimiser la production, de prévenir les attaques et d’éviter des pertes de production."]
@@ -138,12 +141,13 @@
     "three":{
       "heading":["Produce without stress","Produisez sans stress"],
       "paragraph_one":["We put at your disposal 'turnkey' plantations on which we accompany you on a determined number of cycles to help you identify all the contours of an activity given farm and take off on your own afterwards.","Nous mettons à votre disposition des plantations « clé en main » sur lesquelles nous vous accompagnons sur un nombre de cycles déterminé afin de vous aider à cerner tous les contours d’une activité agricole donnée et de prendre votre envol tout seul par la suite."],
-      "paragprah_two":["It is a package that we offer you in the setting up of your farm until the final marketing of your products. Throughout this process, we allow you to remotely follow the evolution of activities via our website.","C’est un package que nous vous offrons dans la mise en place de votre exploitation jusqu’à la commercialisation finale de vos produits. Tout le long de ce processus, nous vous permettons de suivre à distance l’évolution des activités via notre site web."]
+      "paragprah_two":["This offer can also be adapted to your needs in case you are already producers, please contact us for more details.","Cette offre peut aussi être adapté à vos besoins au cas ou vous êtes déjà producteurs, veuillez nous contacter pour plus de détails."]
     },
     "four":{
-      "heading":["Start, plan and control","Commencez, planifier et controler"],
-      "paragraph_one":["The conduct of a farm is subject to several hazards and it is important to have a qualified team to carry out technical studies, technical audits, supervise producers or make recommendations to improve the performance of your farm or of an agricultural project.","La conduite d’une exploitation agricole est soumise à plusieurs aléas et il est important d’avoir une équipe qualifiée pour réaliser des études techniques, des audits techniques, d’encadrer les producteurs ou de faire des recommandations pour améliorer la tenue de votre exploitation ou d’un projet agricole."],
-      "paragraph_two":["To meet all these concerns, we have developed a technical assistance service tailored to the realities of our customers to effectively meet their needs.","Pour répondre à toutes ces préoccupations, nous avons développé un service d’assistance technique tailler sur mesure en fonction des réalités de nos clients afin de répondre efficacement à leurs besoins."]
+      "heading":["Protect your crops like never before","Protéger vos cultures comme jamais auparavant"],
+      "paragraph_one":["Today and in the years to come, the issues at the agricultural level will be changing. It will be necessary to produce more on smaller areas, products of good qualities while respecting the environment.","Aujourd’hui et dans les années à venir, les enjeux au niveaux agricole seront en mutations. Il faudra produire davantage sur de plus petites superficies, des produits de bonnes qualités tout en respectant l’environnement."],
+      "paragraph_two":["Drone spraying appears as a solution to protect crops, provide essential nutrients in time and with unparalleled precision.","La pulvérisation par drone apparait alors comme une solution pour protéger les cultures, apporter les éléments nutritifs essentiels en temps et en heure avec une précision inégalée."],
+      "paragraph_three":["We are equipped with drones having a capacity of 10 to 20L able to spray 2ha in less than 10 minutes while guaranteeing you interesting results thanks to our methodologies developed internally. Our teams are available to perform interventions on your production at a rate per hectare and per production.","Nous sommes équipés de drones ayant une capacité de 10 à 20L capable de pulvériser 2ha en moins de 10 minutes tout en vous garantissant des résultats intéressant grâce à nos méthodologies développées à l’interne. Nos équipes sont disponibles afin d’effectuer des interventions sur votre production moyennant une tarification par hectare et par production."]
       
     }
   },
@@ -152,7 +156,10 @@
     "visionText":["Building the future of African agriculture by focusing on precision agriculture.","Bâtir le futur de l’agriculture africaine en misant sur l’agriculture de précision."],
     "objective":["Objective","Objectif"],
     "objectiveText":["Become a leader in agricultural advisory services in Africa with precision farming experience","Devenir un leader en matière de conseil agricole en Afrique grâce à une expérience basée sur l’agriculture de précision"],
-    "p_one":["Investiv is an Ivorian company specializing in precision agriculture consulting. A pioneer in the use of drones in agriculture in West Africa, we provide our customers with technical and innovative solutions that combine productivity, performance and time savings.","Investiv est une entreprise Ivoirienne spécialisée dans le conseil en matière d’agriculture de précision. Pionnière dans l'utilisation des drones en agriculture en Afrique de l'Ouest, nous fournissons à nos clients des solutions techniques et innovantes alliant productivité, performance et gain de temps."],
+    "p_one":[
+      "Investiv is an Ivorian company specialized in the service of precision agriculture. A pioneer in the use of drones in agriculture in West Africa, we provide our customers with technical and innovative solutions that combine productivity, performance and time savings. These solutions allow them to reduce the losses related to phytosanitary problems at first glance, then to know with precision the state and the dimensions of their lands, finally, to follow the evolution of their agricultural activities and to make preliminary technical studies. to the implementation of their agricultural project. We work with many categories of clients, including: individuals wanting to enter agriculture, professionals in the agricultural sector, producers themselves, agricultural cooperatives, institutions that fund agricultural projects, government institutions, agricultural businesses and NGOs that support the agricultural sector.",
+      "Investiv est une entreprise Ivoirienne spécialisée dans le service en matière d’agriculture de précision. Pionnière dans l'utilisation des drones en agriculture en Afrique de l'Ouest, nous fournissons à nos clients des solutions techniques et innovantes alliant productivité, performance et gain de temps. Ces solutions leur permettent de réduire de prime abord, les pertes liées aux problèmes phytosanitaires, puis de connaître avec précision l'état et les dimensions de leurs terres, enfin, de suivre l'évolution de leurs activités agricoles et de faire des études techniques préalables à la mise en œuvre de leur projet agricole.Nous travaillons avec plusieurs catégories de clients, notamment : les particuliers voulant se lancer en agriculture, les professionnels du secteur agricole, les producteurs eux-mêmes, les coopératives agricoles, les institutions qui financent des projets agricoles, les institutions gouvernementales, les entreprises agricoles et les ONG qui soutiennent le secteur agricole."],
+
     "p_two":["These solutions allow them to reduce the losses related to phytosanitary problems at first glance, then to know with precision the state and the dimensions of their lands, finally, to follow the evolution of their agricultural activities and to make preliminary technical studies. to the implementation of their agricultural project.","Ces solutions leur permettent de réduire de prime abord, les pertes liées aux problèmes phytosanitaires, puis de connaître avec précision l'état et les dimensions de leurs terres, enfin, de suivre l'évolution de leurs activités agricoles et de faire des études techniques préalables à la mise en œuvre de leur projet agricole."],
     "p_three":["We work with many categories of clients, including: individuals wanting to enter agriculture, professionals in the agricultural sector, producers themselves, agricultural cooperatives, institutions that fund agricultural projects, government institutions, agricultural businesses and NGOs that support the agricultural sector.","Nous travaillons avec plusieurs catégories de clients, notamment : les particuliers voulant se lancer en agriculture, les professionnels du secteur agricole, les producteurs eux-mêmes, les coopératives agricoles, les institutions qui financent des projets agricoles, les institutions gouvernementales, les entreprises agricoles et les ONG qui soutiennent le secteur agricole."],
     "team":["Team","Equipe"],
@@ -160,6 +167,8 @@
     "team_two":["Technological Team","Equipe Technologique"],
     "team_three":["Administrative team","Equipe administrative"],
     "team_four":["Drone pilots","Pilote de drone"]
-    
+  },
+  "partners": {
+    "text":["Our Partners","nos partenaires"]
   }
 }

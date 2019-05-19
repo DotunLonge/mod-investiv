@@ -40,7 +40,7 @@ export default {
   },
   four: {
     title:
-      "Assistance technique dans la mise en oeuvre et le suivi de projets agricole",
+      "Pulvérisation Aérienne Par Drone dans la mise en oeuvre et le suivi de projets agricole",
     subTitle: "Commencez, planifier et controler",
     description: `  La conduite d’une exploitation agricole est soumise à
     plusieurs aléas et il est important d’avoir une équipe

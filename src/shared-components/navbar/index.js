@@ -2,10 +2,8 @@ import React from "react";
 import NavbarStyle from "./navbar.style";
 // Fade
 import { NavLink } from "react-static";
-
 import logoPlain from "../../assets/logo.plain.svg";
 import universal from "react-universal-component";
-
 import Hamburger from "./hamburger";
 
 import { renderToStaticMarkup } from "react-dom/server";

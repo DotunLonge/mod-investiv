@@ -176,6 +176,18 @@ export default () => {
                 <span>
                  <Translate id="services.two.deliverable_six"/></span>
               </li>
+
+              <li>
+                <img src={check} />
+                <span>
+                 <Translate id="services.two.deliverable_seven"/></span>
+              </li>
+
+              <li>
+                <img src={check} />
+                <span>
+                 <Translate id="services.two.deliverable_eight"/></span>
+              </li>
             </ul>
           </div>
         </div>

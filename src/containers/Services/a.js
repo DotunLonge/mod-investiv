@@ -120,7 +120,7 @@ export default () => {
           </div>
 
           <div className="xs-12 top">
-            <h3>  <Translate id="services.step"/> </h3>
+            <h3>  <Translate id="services.deliverables"/> </h3>
             <p>
               <span><Translate id="services.one.deliverableText"/></span>
             </p>
@@ -154,6 +154,12 @@ export default () => {
                 <img src={check} />
                 <span>
                  <Translate id="services.one.deliverable_five"/></span>
+              </li>
+
+              <li>
+                <img src={check} />
+                <span>
+                 <Translate id="services.one.deliverable_six"/></span>
               </li>
             </ul>
           </div>

@@ -32,6 +32,10 @@ export default () => {
           <p>
           <Translate id="services.four.paragraph_two"/>
           </p>
+
+          <p>
+          <Translate id="services.four.paragraph_three"/>
+          </p>
         </div>
       </div>
     </ServiceWrapper>

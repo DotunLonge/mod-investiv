@@ -38,6 +38,11 @@ import plogo3 from "../assets/prix/c.png";
 import plogo4 from "../assets/prix/d.png";
 import plogo5 from "../assets/prix/e.png";
 
+import parlogo1 from "../assets/partners/parlogo1.png";
+import parlogo2 from "../assets/partners/parlogo2.png";
+import parlogo3 from "../assets/partners/parlogo3.png";
+import parlogo4 from "../assets/partners/parlogo4.png";
+
 import coffee from "../assets/coffee.jpeg";
 
 import right_arrow from "../assets/right-arrow.svg";
@@ -596,6 +601,45 @@ class Home extends React.Component {
             </section>
         }
 
+<section className='xs-12 partners' id="just-more-logos">
+          <div className='xs-12'>
+            <h4> <Translate id="partners.text"/> </h4>
+            <div className="xs-10 xs-off-1 sm-11">
+              <div className="xs-6 sm-4 md-3">
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={parlogo1} className="xs-12 md-11" />
+              </div>
+              <div className="xs-6 sm-4 md-3">
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={parlogo2} className="xs-12 md-11" />
+              </div>
+              <div className="xs-6 sm-4 md-3">
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={parlogo3} className="xs-12 md-11" />
+              </div>
+              <div className="xs-6 sm-4 md-3">
+                <LazyImage
+                placeholder={({imageProps, ref}) => (
+                  <div className="imgPlaceholder" ref={ref} />)}
+                actual={({imageProps}) => (<img {...imageProps}/>)}
+                src={parlogo4} className="xs-12 md-11" />
+              </div>
+             
+            </div>
+        
+          </div>
+        </section>
+   
+
         <section className="xs-12" id="coffee">
           <div className="xs-12 sm-6 coffee-h">
             <div className="c-w">
@@ -676,6 +720,8 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+
+  
       </HomeStyle>
     );
   }
