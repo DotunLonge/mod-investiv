@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-static";
+import { Translate } from "react-localize-redux";
 
 const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
   '' :
@@ -7,29 +8,30 @@ const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
 
 export default class BigScreenNavbar extends React.PureComponent {
   render() {
-    const { className } = this.props;
+    const { className, children } = this.props;
     return (
       <div className={className} id="right-menu">
         <div className="c-w">
           <div className="c">
             <div className="xs-12 inner">
               <li className="sm">
-                <NavLink to="/a-propos">A propos</NavLink>
+                <NavLink to="/a-propos"><Translate id="navbar.aboutus"/></NavLink>
               </li>
               <li className="sm">
-                <NavLink to="/nos-services">Nos services</NavLink>
+                <NavLink to="/nos-services"><Translate id="navbar.services"/></NavLink>
               </li>
               <li className="sm">
-                <NavLink to="/nos-actualités">Nos actualités</NavLink>
+                <NavLink to="/nos-actualités"><Translate id="navbar.blog"/></NavLink>
               </li>
               <li className="sm">
-                <NavLink to={suiviURL} target="_blank"> Suivre mon projet</NavLink>
+                <NavLink to={suiviURL} target="_blank"> <Translate id="navbar.follow"/></NavLink>
               </li>
               <li className="sm">
                 <a href="#contactezNous" className="btn">
-                  Contactez nous
+                <Translate id="navbar.contact"/>
                 </a>
               </li>
+              {children}
             </div>
           </div>
         </div>

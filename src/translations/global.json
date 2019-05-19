@@ -1,0 +1,165 @@
+{
+  "home": {
+    "heading": ["Revolutionize your production", "Révolutionner votre production"],
+    "headingText":[
+      "Modernize your farming operations, increase your yields and save time with our precision farming services focused on technology.", "Modernisez vos opérations agricoles, augmentez vos rendements et gagnez du temps grâce à nos services d'agriculture de précision axés sur la technologie."],
+      "contact":["Contact Us","Contactez nous"],
+      "follow":["Follow our project","Suivre mon projet"],
+      "consulting":["Consulting in precision agriculture","Conseil en agriculture de précision"],
+      "consultingText":["Investiv is an Ivorian company specialized in advice on precision agriculture. Pioneer in the use of drones in agriculture in West Africa,We provide our customers with technical solutions and innovative solutions combining productivity, performance and time savings.", "Investiv est une entreprise Ivoirienne spécialisée dans le"],
+      "learnMore":["Learn More","Apprendre encore plus"],
+      "precision":["Precision","Précision"],
+      "precisionText":["Obtenir des données plus précises sur l'état et les dimensions de votre terrain.","Obtain more precise data on the state and dimensions of your land."],
+      "performance":["High Performance","Haute performance"],
+      "performanceText":["Achieve a level of performance above current standards","Atteindre un niveau de performance supérieur aux normes actuelles"],
+      "win":["Win time","Gagner du temps"],
+      "winText":["Save time in your farming operations with high tech tools","Gagnez du temps dans vos opérations agricoles avec des outils de haute technologie"],
+      "service":["Our Services","Nos services"],
+      
+      "serviceOne":["Aerial mapping by drone","Cartographie aérienne par drone"],
+      "serviceOneSub":["Control the state and dimensions of your land","Maitrisez l’état et les dimensions de votre terrain"],
+      "serviceOneText":["INVESTIV provides drones capable of performing aerial mapping as well as contours of your plot. Get an overview of your agricultural parcel, know exactly the boundaries of the parcel and develop a future development plan.","INVESTIV fournit des drones capables d'effectuer la cartographie aérienne ainsi que les courbes de niveau de votre parcelle. Obtenez une vue d'ensemble de votre parcelle agricole, connaissez exactement les limites de la parcelle et élaborez un futur plan d'aménagement."],
+      
+      "serviceTwo":["Phytosanitary diagnosis by drone","Diagnostic phytosanitaire par drone"],
+      "serviceTwoSub":["Achieve performance levels above current standards","Atteignez des niveaux de performance supérieur aux standards actuels"],
+      "serviceTwoText":["In Côte d'Ivoire, 50% of agricultural losses are related to plant diseases. This high percentage is also valid in several countries of the West African subregion. INVESTIV has designed a phytosanitary diagnostic service by drone whose application is to respond effectively to this problem.","En Côte d'Ivoire, 50% des pertes agricoles sont liées aux maladies des plantes. Ce pourcentage élevé est également valable dans plusieurs pays de la sous-région ouest-africaine. INVESTIV a conçu un service de diagnostic phytosanitaire par drone qui a pour application de répondre efficacement à ce problème."],
+
+      "serviceThree":["Intelligent Farm Management","Gestion intelligente d’exploitation agricole"],
+      "serviceThreeSub":["Produce without stress","Produisez sans stress"],
+      "serviceThreeText":["We put at your disposal 'turnkey' plantations on which we accompany you on a specific number of cycles to help you identify all the contours of a given agricultural activity and take off by yourself. It is a package that we offer you in the setting up of your farm until the final marketing of your products. Throughout this process, we allow you to remotely follow the evolution of activities via our website.","Nous mettons à votre disposition des plantations « clé en main » sur lesquelles nous vous accompagnons sur un nombre de cycles déterminé afin de vous aider à cerner tous les contours d’une activité agricole donnée et de prendre votre envol tout seul par la suite. C’est un package que nous vous offrons dans la mise en place de votre exploitation jusqu’à la commercialisation finale de vos produits. Tout le long de ce processus, nous vous permettons de suivre à distance l’évolution des activités via notre site web."],
+
+      "serviceFour": ["Technical assistance in the implementation and monitoring of agricultural projects","Assistance technique dans la mise en oeuvre et le suivi de projets agricole"],
+      "serviceFourSub":["Start, plan and control","Commencez, planifier et controler"],
+      "serviceFourText":["The conduct of a farm is subject to several hazards and it is important to have a qualified team to carry out technical studies, technical audits, supervise the producers or make recommendations to improve the behavior of your farm. of an agricultural project. To meet all these concerns, we have developed a technical assistance service tailored to the realities of our customers to effectively meet their needs.","La conduite d’une exploitation agricole est soumise à plusieurs aléas et il est important d’avoir une équipe qualifiée pour réaliser des études techniques, des audits techniques, d’encadrer les producteurs ou de faire des recommandations pour améliorer la tenue de votre exploitation ou d’un projet agricole. Pour répondre à toutes ces préoccupations, nous avons développé un service d’assistance technique tailler sur mesure en fonction des réalités de nos clients afin de répondre efficacement à leurs besoins."],
+
+      "someLogos": ["Our work has earned us the recognition of these trusted partners","Notre travail nous a valu la reconnaissance de ces partenaires de confiance"],
+
+      "someMoreLogos": ["Featured in","En vedette dans"],
+
+      "blog": ["Latest news on our blog","Dernières nouvelles sur notre blog"],
+      
+      "revolution":["Ready to revolutionize your production?","Prêt à révolutionner votre production?"],
+
+      "revolutionText":["You can start today and advance your farm operations","Vous pouvez commencer dès aujourd'hui et faire progresser vos opérations agricoles"],
+
+      "distinctions":["Awards and distinctions","Prix ​​et distinctions"],
+      "awardOne": ["Grand Prize of the bpc of the Ivorian patronage 2017","Grand prix de la bpc du patronnat Ivoirien 2017"],
+      "awardTwo": ["Tony Elumelu Foundation 2017 Award","Prix de la fondation Tony Elumelu 2017"],
+      "awardThree":["3rd prize at the start-up forum of the Ecole Polytechnique de Paris in 2018","3ème prix au forum des start-up de l’école polytechnique de Paris en 2018"],
+      "awardFour":["2017 District Award of Abidjan","Prix du district d’Abidjan 2017"],
+      "awardFive":["1st Prize at the AfDB Forum on Young Farmers (Agripitch) in 2018","1er Prix au forum de la BAD sur les jeunes agriculteurs (Agripitch) en 2018"]
+  },
+  "footer":{
+    "compagnie":["COMPANY","COMPAGNIE"]
+  },
+  "navbar":{
+    "aboutus":["About","A propos"],
+    "services":["Our Services","Nos services"],
+    "blog":["Our news","Nos actualités"],
+    "follow":["Follow our project","Suivre mon projet"],
+    "contact":["Contact Us","Contactez nous"],
+    "servicesOptions":{
+      "one":["Aerial mapping by drone","Cartographie aérienne par drone"],
+      "two":["Phytosanitary diagnosis by drone","Diagnostic Phytosanitaire par drone"],
+      "three":["Intelligent Farm Management","Gestion intelligente d’exploitation agricole"],
+      "four":["Technical assistance","Assistance technique"]
+      
+    }
+  },
+  "services":{
+    "services":["Our Services","Nos services"],
+    "objectives": ["Objectives","Objectifs"],
+    "methodology":["Methodology","Methodologie"],
+    "step":["Steps","Etapes"],
+    "deliverables":["Livrables","Deliverables"],
+    "one":{
+
+    "objectivesText":["Aerial drone mapping has the following objectives:","La cartographie aérienne par drone présente les objectifs suivants:"],
+    
+    "objectiveOne":["Overview and exact demarcation of the parcel","Vue d’ensemble et délimitation exacte de la parcelle"],
+    "objectiveTwo":["Knowledge of terrain topography from contour lines","Connaissance de la topographie du terrain à partir des courbes de niveau"],
+    "objectiveThree":["Future plan of the parcel","Plan d’aménagement futur de la parcelle"], 
+    
+    
+    "methodologyText":["We use drones to fly over your parcel and take very high resolution images at regular intervals of time. After the field activity, we proceed to the processing of the data through our cartography software in order to have an overall map of the parcel.","Nous utilisons des drones pour survoler votre parcelle et prendre des images de très haute résolution à des intervalles de temps régulier. Après l’activité de terrain, nous procedons au traitement des données à travers nos logiciels de cartographie afin d’avoir une carte d’ensemble de la parcelle."],
+    
+    "step_one":["Pre-Mission Studies","Études préalables à la mission"],
+    "step_two":["Flight plan organization","Organisation du plan de vol"],
+    "step_three":["Realization of the mission in the field","Réalisation de la mission sur le terrain"],
+    "step_four":["Data analysis","Analyse des données"],
+    "step_five":["Report delivery", "Livraison du rapport"],
+    
+    "deliverableText":["Rendering after data analysis is presented as follows:","Les rendus après analyse des données sont présentés comme suit:"],
+    "deliverable_one":["An ortho-mosaic map of the parcel","Une carte en ortho-mosaïque de la parcelle"],
+    "deliverable_two":["An ortho-mosaic map superimposed on a satellite plane","Une carte ortho-mosaïque superposée sur plan satellite"],
+    "deliverable_three":["A DEM (Digital Terrain Model) map of the parcel","Une carte MNT (Modèle Numérique de Terrain) de la parcelle"],
+    "deliverable_four":["A map MNT superimposed on satellite map","Une carte MNT superposée sur plan satellite"],
+    "deliverable_five":["Plan of development of the parcel (if it takes place)","Plan d’aménagement de la parcelle (s’il y’a lieu)"],
+    
+    "title": ["Investiv Group | Our Services - aerial aerial mapping","Investiv Group | Non Services - Cartographie aérienne par drone"],
+    "heading":["Control the state and dimensions of your land","Maitrisez l’état et les dimensions de votre terrain"],
+    "paragraph_one":["In the implementation of an agricultural project, it is important to have an overview of the agricultural parcel, to know exactly the boundaries of the plot and to design a future land development plan.","Dans la mise en œuvre d’un projet agricole, il est important de disposer d’une vue d’ensemble de la parcelle agricole, de connaitre avec exactitude les limites de la parcelle et de concevoir un plan d’aménagement futur du terrain."]
+    ,
+    "paragraph_two":["The development plan will be used as a guideline for the project and will allow to allocate portions of land to cultural vocations according to the site topography and project objectives. It is in this context that INVESTIV puts at your disposal drones capable of making aerial maps as well as contour lines of your plot. This geo-referenced and ready-to-use map is an essential element that will serve you throughout the conduct of your operation.","Le plan d’aménagement servira de fil conducteur du projet et permettra d’attribuer des portions de terre à des vocations culturales selon la topographie des sites et les objectifs du projet. C’est dans ce cadre qu’INVESTIV met à votre disposition des drones capables de réaliser des cartographies aériennes ainsi que des courbes de niveaux de votre parcelle. Cette carte géo-référencée et prête à emploi est un élément essentiel qui vous servira tout le long de la conduite de votre exploitation."]
+    },
+    "two":{
+
+      "objectivesText":["The phytosanitary diagonstic by drone presents the following objectives:","Le diagonstic phytosanitaire par drone présente les objectifs suivants:"],
+      
+      "objectiveOne":["Identification of disease areas","Identification des zones de maladies"],
+      "objectiveTwo":["Identification of fertile and less hydrated areas","Identification des zones oins fertiles et moins hydratées"],
+      "objectiveThree":["Precision of fertilizer application and phytosanitary treatments","Précision des épandages d’engrais et des traitements phytosanitaires"], 
+      "objectiveFour":["Rational management of water resources and inputs","Gestion rationnel des ressources en eau et des intrants"],
+      "objectiveFive":["Counting plants","Comptage des plants"],
+      "objectiveSix":["Estimates of potential returns","Estimations des rendements potentiels"],
+       
+      "methodologyText_one":["We have drones equipped with multi-spectral sensors to quickly identify on your plot areas of disease, less fertile areas and less hydrated, so as to make fertilizer spreading and much more precise phytosanitary treatments, manage the water resource and save inputs.","Nous disposons de drones équipées de capteurs multi-spectraux permettant d’identifier rapidement sur votre parcelle les zones de maladies, les zones les moins fertiles et les moins hydratées, de manière à faire des épandages d’engrais et des traitements phytosanitaires beaucoup plus précis, à gérer la ressource en eau et à économiser les intrants."],
+     
+      "methodologyText_two":["To do this, during the field activity, we establish with the drone a parcel flight plan whose objective is to extract as much data as possible from the state of the parcel. These data are then processed by agricultural experts and engineers to establish maps.","Pour ce faire, au cours de l’activité de terrain, on établit avec le drone un plan de vol parcellaire dont l’objectif est d’extraire le plus de données possible de l’état de la parcelle. Ces données sont ensuite traitées par des experts et ingénieurs agronome afin d’établir des cartes."],
+     
+      "step_one":["Pre-Mission Studies","Études préalables à la mission"],
+      "step_two":["Flight plan organization","Organisation du plan de vol"],
+      "step_three":["Realization of the mission in the field","Réalisation de la mission sur le terrain"],
+      "step_four":["Data analysis","Analyse des données"],
+      "step_five":["Report delivery", "Livraison du rapport"],
+      
+      "deliverable_one":["Calculation of vegetation index and flowering rate","Calcul de l’indice de végétation et du taux de floraison"],
+      "deliverable_two":["Nitrogen fertilization map","Carte de fertilisation azotée"],
+      "deliverable_three":["Map of chlorophyll activity","Carte de l’activité chlorophyllienne"],
+      "deliverable_four":["Measuring crop density","Mesure de la densité de culture"],
+      "deliverable_five":["Estimation of biomass and yield","Estimation de la biomasse et du rendement"],
+      "deliverable_six":["Detection of disease areas","Détection des zones de maladies"],
+      
+      "heading":["Achieve performance levels above current standards","Atteignez des niveaux de performance supérieur aux standards actuels"],
+      "paragraph_one":["In Côte d'Ivoire, 50% of agricultural losses are related to plant diseases. This high percentage is also valid in several countries of the West African sub-region. Today more than ever, it is essential to quickly identify outbreaks on plots in order to find adequate solutions to optimize production, prevent attacks and avoid production losses.","En Côte d’Ivoire, 50% des pertes agricoles sont liées aux maladies des plantes. Ce pourcentage élevé est aussi valable dans plusieurs pays de la sous-région Ouest-Africaine. Aujourd’hui plus que jamais, il est primordiale d’identifier rapidement les foyers de contaminations sur les parcelles afin de trouver des solutions adéquates en vue d’optimiser la production, de prévenir les attaques et d’éviter des pertes de production."]
+      ,
+      "paragraph_two":["It is in this perspective that INVESTIV has designed a phytosanitary diagnostic service by drone that has the application to effectively address this issue.", "C’est dans cette perspective qu’INVESTIV a conçu un service de diagnostic phytosanitaire par drone qui a pour application de répondre efficacement à cette problématique."]
+    },
+    "three":{
+      "heading":["Produce without stress","Produisez sans stress"],
+      "paragraph_one":["We put at your disposal 'turnkey' plantations on which we accompany you on a determined number of cycles to help you identify all the contours of an activity given farm and take off on your own afterwards.","Nous mettons à votre disposition des plantations « clé en main » sur lesquelles nous vous accompagnons sur un nombre de cycles déterminé afin de vous aider à cerner tous les contours d’une activité agricole donnée et de prendre votre envol tout seul par la suite."],
+      "paragprah_two":["It is a package that we offer you in the setting up of your farm until the final marketing of your products. Throughout this process, we allow you to remotely follow the evolution of activities via our website.","C’est un package que nous vous offrons dans la mise en place de votre exploitation jusqu’à la commercialisation finale de vos produits. Tout le long de ce processus, nous vous permettons de suivre à distance l’évolution des activités via notre site web."]
+    },
+    "four":{
+      "heading":["Start, plan and control","Commencez, planifier et controler"],
+      "paragraph_one":["The conduct of a farm is subject to several hazards and it is important to have a qualified team to carry out technical studies, technical audits, supervise producers or make recommendations to improve the performance of your farm or of an agricultural project.","La conduite d’une exploitation agricole est soumise à plusieurs aléas et il est important d’avoir une équipe qualifiée pour réaliser des études techniques, des audits techniques, d’encadrer les producteurs ou de faire des recommandations pour améliorer la tenue de votre exploitation ou d’un projet agricole."],
+      "paragraph_two":["To meet all these concerns, we have developed a technical assistance service tailored to the realities of our customers to effectively meet their needs.","Pour répondre à toutes ces préoccupations, nous avons développé un service d’assistance technique tailler sur mesure en fonction des réalités de nos clients afin de répondre efficacement à leurs besoins."]
+      
+    }
+  },
+  "about":{
+    "title":["About Us","A propos"],
+    "visionText":["Building the future of African agriculture by focusing on precision agriculture.","Bâtir le futur de l’agriculture africaine en misant sur l’agriculture de précision."],
+    "objective":["Objective","Objectif"],
+    "objectiveText":["Become a leader in agricultural advisory services in Africa with precision farming experience","Devenir un leader en matière de conseil agricole en Afrique grâce à une expérience basée sur l’agriculture de précision"],
+    "p_one":["Investiv is an Ivorian company specializing in precision agriculture consulting. A pioneer in the use of drones in agriculture in West Africa, we provide our customers with technical and innovative solutions that combine productivity, performance and time savings.","Investiv est une entreprise Ivoirienne spécialisée dans le conseil en matière d’agriculture de précision. Pionnière dans l'utilisation des drones en agriculture en Afrique de l'Ouest, nous fournissons à nos clients des solutions techniques et innovantes alliant productivité, performance et gain de temps."],
+    "p_two":["These solutions allow them to reduce the losses related to phytosanitary problems at first glance, then to know with precision the state and the dimensions of their lands, finally, to follow the evolution of their agricultural activities and to make preliminary technical studies. to the implementation of their agricultural project.","Ces solutions leur permettent de réduire de prime abord, les pertes liées aux problèmes phytosanitaires, puis de connaître avec précision l'état et les dimensions de leurs terres, enfin, de suivre l'évolution de leurs activités agricoles et de faire des études techniques préalables à la mise en œuvre de leur projet agricole."],
+    "p_three":["We work with many categories of clients, including: individuals wanting to enter agriculture, professionals in the agricultural sector, producers themselves, agricultural cooperatives, institutions that fund agricultural projects, government institutions, agricultural businesses and NGOs that support the agricultural sector.","Nous travaillons avec plusieurs catégories de clients, notamment : les particuliers voulant se lancer en agriculture, les professionnels du secteur agricole, les producteurs eux-mêmes, les coopératives agricoles, les institutions qui financent des projets agricoles, les institutions gouvernementales, les entreprises agricoles et les ONG qui soutiennent le secteur agricole."],
+    "team":["Team","Equipe"],
+    "team_one":["Agronomic team","Equipe agronomique"],
+    "team_two":["Technological Team","Equipe Technologique"],
+    "team_three":["Administrative team","Equipe administrative"],
+    "team_four":["Drone pilots","Pilote de drone"]
+    
+  }
+}

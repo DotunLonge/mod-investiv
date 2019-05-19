@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { polyfillLoader } from 'polyfill-io-feature-detection';
+
+var psuedoReduxStore = {
+
+};
+
 // This function load polyfills only if needed. By default it uses polyfill.io
 if (typeof window !== "undefined") {
     polyfillLoader({

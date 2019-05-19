@@ -4,6 +4,7 @@ import icon_b from "../assets/about/icon_b.svg";
 import icon_c from "../assets/about/icon_c.svg";
 import { Head } from "react-static";
 import about from "../json/about.json";
+import { Translate } from "react-localize-redux";
 
 const teamReq = require.context('../assets/team/', false);
 const getTeamPic = link => link.startsWith('http') ? link : teamReq('./' + `${link}`);
@@ -20,7 +21,7 @@ export default () => {
       <div className="xs-12 withBackground">
         <div className="c-w relative">
           <div className="c t-c">
-            <h3> A propos </h3>
+            <h3> <Translate id="about.title"/> </h3>
           </div>
         </div>
       </div>
@@ -38,8 +39,7 @@ export default () => {
                     <div className="xs-9">
                       <h4> Vision </h4>
                       <p>
-                        Bâtir le futur de l’agriculture africaine en misant sur
-                        l’agriculture de précision.
+                      <Translate id="about.visionText"/>
                       </p>
                     </div>
                   </div>
@@ -55,11 +55,9 @@ export default () => {
                       <img src={icon_c} />
                     </div>
                     <div className="xs-9">
-                      <h4> Objectif </h4>
+                      <h4>  <Translate id="about.objective"/> </h4>
                       <p>
-                        Devenir un leader en matière de conseil agricole en
-                        Afrique grâce à une expérience basée sur l’agriculture
-                        de précision
+                      <Translate id="about.objectiveText"/>
                       </p>
                     </div>
                   </div>
@@ -71,26 +69,13 @@ export default () => {
 
         <div className="xs-10 xs-off-1 sm-8 sm-off-2 content">
           <p>
-            Investiv est une entreprise Ivoirienne spécialisée dans le conseil
-            en matière d’agriculture de précision. Pionnière dans l'utilisation
-            des drones en agriculture en Afrique de l'Ouest, nous fournissons à
-            nos clients des solutions techniques et innovantes alliant
-            productivité, performance et gain de temps.
+           <Translate id="about.p_one"/>           
           </p>
           <p>
-            Ces solutions leur permettent de réduire de prime abord, les pertes
-            liées aux problèmes phytosanitaires, puis de connaître avec
-            précision l'état et les dimensions de leurs terres, enfin, de suivre
-            l'évolution de leurs activités agricoles et de faire des études
-            techniques préalables à la mise en œuvre de leur projet agricole.
+          <Translate id="about.p_two"/>           
           </p>
           <p>
-            Nous travaillons avec plusieurs catégories de clients, notamment :
-            les particuliers voulant se lancer en agriculture, les
-            professionnels du secteur agricole, les producteurs eux-mêmes, les
-            coopératives agricoles, les institutions qui financent des projets
-            agricoles, les institutions gouvernementales, les entreprises
-            agricoles et les ONG qui soutiennent le secteur agricole.
+          <Translate id="about.p_three"/>           
           </p>
         </div>
       </div>
@@ -98,8 +83,10 @@ export default () => {
       <div className="xs-10 xs-off-1 top">
         <div className="xs-12" id="Equipe">
           <div className="xs-12 pre t-c">
-            <h2> Equipe </h2>
-            <h4> Equipe agronomique </h4>
+            <h2>    <Translate id="about.team"/>           
+         </h2>
+            <h4>    <Translate id="about.team_one"/>           
+         </h4>
           </div>
 
           <div className="xs-12 top">
@@ -119,7 +106,8 @@ export default () => {
 
         <div className="xs-12 top" id="Equipe">
           <div className="xs-12 pre t-c">
-            <h4> Equipe Technologique </h4>
+            <h4>    <Translate id="about.team_two"/>           
+         </h4>
           </div>
 
           <div className="xs-12 top">
@@ -139,7 +127,7 @@ export default () => {
 
         <div className="xs-12 top" id="Equipe">
           <div className="xs-12 pre t-c">
-            <h4> Equipe administrative </h4>
+            <h4> <Translate id="about.team_three"/> </h4>
           </div>
 
           <div className="xs-12 top">
@@ -159,7 +147,7 @@ export default () => {
 
         <div className="xs-12 top" id="Equipe">
           <div className="xs-12 pre t-c">
-            <h4> Pilote de drone </h4>
+            <h4> <Translate id="about.team_four"/> </h4>
           </div>
 
           <div className="xs-12 top">

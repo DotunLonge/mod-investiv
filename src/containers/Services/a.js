@@ -10,6 +10,7 @@ ServiceWrapper.preload();
 import p_one from "../../assets/p_one.png";
 import check from "../../assets/check.svg";
 import etapes from "../../assets/etapes.svg";
+import { Translate } from "react-localize-redux";
 
 export default () => {
   return (
@@ -22,65 +23,51 @@ export default () => {
 
       <div className="xs-12 content">
         <div className="xs-10 xs-off-1 sm-8 sm-off-2">
-          <h3> Maitrisez l’état et les dimensions de votre terrain </h3>
+          <h3> 
+            <Translate id="services.one.heading"/>
+       </h3>
           <p>
-            Dans la mise en œuvre d’un projet agricole, il est important de
-            disposer d’une vue d’ensemble de la parcelle agricole, de connaitre
-            avec exactitude les limites de la parcelle et de concevoir un plan
-            d’aménagement futur du terrain.
+            <Translate id="services.one.paragraph_one"/>
           </p>
           <p>
-            Le plan d’aménagement servira de fil conducteur du projet et
-            permettra d’attribuer des portions de terre à des vocations
-            culturales selon la topographie des sites et les objectifs du
-            projet. C’est dans ce cadre qu’INVESTIV met à votre disposition des
-            drones capables de réaliser des cartographies aériennes ainsi que
-            des courbes de niveaux de votre parcelle. Cette carte géo-référencée
-            et prête à emploi est un élément essentiel qui vous servira tout le
-            long de la conduite de votre exploitation.
+          <Translate id="services.one.paragraph_two"/>
+          
           </p>
 
           <div className="xs-12 t-c">
             <img src={p_one} className="fit" />
           </div>
 
-          <h3> Objectifs </h3>
+          <h3>   <Translate id="services.objectives"/> </h3>
 
           <p>
-            La cartographie aérienne par drone présente les objectifs suivants:
-          </p>
+          <Translate id="services.one.objectivesText"/>  </p>
 
           <ul id="objectives">
             <li>
               <img src={check} />
-              <span>Vue d’ensemble et délimitation exacte de la parcelle</span>
+              <span> <Translate id="services.one.objectiveOne"/></span>
             </li>
             <li>
               <img src={check} />
-              <span>
-                Connaissance de la topographie du terrain à partir des courbes
-                de niveau
-              </span>
+              <span> <Translate id="services.one.objectiveTwo"/></span>
+            
             </li>
             <li>
               <img src={check} />
-              <span> Plan d’aménagement futur de la parcelle</span>
-            </li>
+              <span> <Translate id="services.one.objectiveThree"/></span>
+              </li>
           </ul>
 
           <div className="xs-12 top">
-            <h3> Methodologie </h3>
+          <h3> <Translate id="services.methodology"/> </h3>
             <p>
-              Nous utilisons des drones pour survoler votre parcelle et prendre
-              des images de très haute résolution à des intervalles de temps
-              régulier. Après l’activité de terrain, nous procedons au
-              traitement des données à travers nos logiciels de cartographie
-              afin d’avoir une carte d’ensemble de la parcelle.
+            <Translate id="services.one.methodologyText"/>
             </p>
           </div>
 
           <div className="xs-12 top">
-            <h3> Etapes </h3>
+            <h3> <Translate id="services.step"/> </h3>
 
             <ul id="etapes">
               <span id="line" />
@@ -89,7 +76,7 @@ export default () => {
                   <img src={etapes} />
                 </div>
                 <div className="xs-10 sm-11">
-                  <span> Études préalables à la mission </span>
+                  <span> <Translate id="services.one.step_one"/> </span>
                 </div>
               </li>
 
@@ -98,7 +85,7 @@ export default () => {
                   <img src={etapes} />
                 </div>
                 <div className="xs-10 sm-11">
-                  <span> Organisation du plan de vol</span>
+                  <span>  <Translate id="services.one.step_two"/></span>
                 </div>
               </li>
 
@@ -107,7 +94,7 @@ export default () => {
                   <img src={etapes} />
                 </div>
                 <div className="xs-10 sm-11">
-                  <span> Réalisation de la mission sur le terrain </span>
+                  <span>  <Translate id="services.one.step_three"/> </span>
                 </div>
               </li>
 
@@ -116,7 +103,7 @@ export default () => {
                   <img src={etapes} />
                 </div>
                 <div className="xs-10 sm-11">
-                  <span> Analyse des données </span>
+                  <span>  <Translate id="services.one.step_four"/> </span>
                 </div>
               </li>
 
@@ -126,45 +113,47 @@ export default () => {
                 </div>
 
                 <div className="xs-10 sm-11">
-                  <span> Livraison du rapport final </span>
+                  <span>  <Translate id="services.one.step_five"/> </span>
                 </div>
               </li>
             </ul>
           </div>
 
           <div className="xs-12 top">
-            <h3> Livrables </h3>
+            <h3>  <Translate id="services.step"/> </h3>
             <p>
-              Les rendus après analyse des données sont présentés comme suit:
+              <span><Translate id="services.one.deliverableText"/></span>
             </p>
             <ul id="livrables">
               <li>
                 <img src={check} />
-                <span>Une carte en ortho-mosaïque de la parcelle</span>
+                <span><Translate id="services.one.deliverable_one"/></span>
               </li>
 
               <li>
                 <img src={check} />
                 <span>
-                  Une carte ortho-mosaïque superposée sur plan satellite
+                  <Translate id="services.one.deliverable_two"/>
                 </span>
               </li>
 
               <li>
                 <img src={check} />
                 <span>
-                  Une carte MNT (Modèle Numérique de Terrain) de la parcelle
-                </span>
+                <Translate id="services.one.deliverable_three"/>
+                 </span>
               </li>
 
               <li>
                 <img src={check} />
-                <span>Une carte MNT superposée sur plan satellite</span>
-              </li>
+                <span>
+                <Translate id="services.one.deliverable_four"/></span>
+                </li>
 
               <li>
                 <img src={check} />
-                <span>Plan d’aménagement de la parcelle (s’il y’a lieu)</span>
+                <span>
+                 <Translate id="services.one.deliverable_five"/></span>
               </li>
             </ul>
           </div>

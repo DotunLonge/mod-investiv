@@ -47,17 +47,74 @@ import p_two from "../assets/p_two.jpeg";
 import p_three from "../assets/p_three.jpeg";
 import p_four from "../assets/p_four.jpeg";
 import home from "../json/home.json";
+import ImageGallery from 'react-image-gallery';
 
 import { truncate } from "../helpers/utils";
+import "react-image-gallery/styles/css/image-gallery.css";
+import Axios from 'axios';
+
+import { renderToStaticMarkup } from "react-dom/server";
+import { withLocalize } from "react-localize-redux";
+import globalTranslations from "../translations/global.json";
+import { Translate } from "react-localize-redux";
 
 const suiviURL = process.env.REACT_STATIC_ENV === 'development' ?
   '' :
   'http://v1.investivgroup.com/suivi/';
 console.log('environnement-courant:', process.env.REACT_STATIC_ENV);
 
+let gallery_url = "http://localhost:4500/pictures";
+
 class Home extends React.Component {
+  constructor(props){
+    super(props);
+    props.initialize({
+      languages: [
+        { name: "English", code: "en" },
+        { name: "French", code: "fr" }
+      ],
+      translation: globalTranslations,
+      options: { renderToStaticMarkup }
+    });
+  }
+
+  componentWillMount(){
+    // this.props.addTranslation(frenchTranslations);
+
+    if(sessionStorage.getItem("isAuthenticated")){
+      this.temp = true;
+      sessionStorage.clear();
+    }
+    this.fetchGalleryImages();
+
+  }
+
+  fetchGalleryImages = ()=>{
+    Axios({
+      url: gallery_url, method: "GET"
+    }).then(res=>{
+      this.setState({
+        galleryImages: res.data.images.map(image=>{
+          return {
+            original: image.imageUrl,
+            thumbnail: image.imageUrl
+          }
+        })
+      });
+    }).catch(res=>{
+      console.log(res.data);
+    });
+  }
+
+  componentWillUnmount(){
+    if(this.temp === true){
+      sessionStorage.setItem("isAuthenticated", "true");
+    }
+  }
+  
   state = {
-    loaded: false
+    loaded: false,
+    galleryImages: []
   };
 
   onLoad = e => {
@@ -68,7 +125,7 @@ class Home extends React.Component {
 
   render() {
     const { loaded } = this.state,
-      { posts } = this.props;
+    { posts } = this.props;
 
     return (
       <HomeStyle className="xs-12">
@@ -84,25 +141,25 @@ class Home extends React.Component {
         <section className="xs-12 header">
           <div className="c-w">
             <div className="c t-c">
-              <h2 className="xs-10 xs-off-1">Révolutionner votre production</h2>
+              <h2 className="xs-10 xs-off-1">
+              <Translate id="home.heading" />
+              </h2>
               <p className="xs-10 xs-off-1 sm-6 sm-off-3">
-                Modernisez vos opérations agricoles, augmentez vos rendements et
-                gagnez du temps grâce à nos services d'agriculture de précision
-                axés sur la technologie.
+              <Translate id="home.headingText" />
               </p>
 
               <div className="xs-10 xs-off-1 sm-8 sm-off-2 md-6 md-off-3">
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-r">
                     <a href="#contactezNous" className="btn" onClick={() => document.getElementById('contact.nom').focus()}>
-                      Contactez nous
-                    </a>
+                    <Translate id="home.contact" />
+                </a>
                   </div>
                 </div>
                 <div className="xs-12 sm-6">
                   <div className="xs-12 sm-10 mr-l">
                     <a href={suiviURL} target="_blank" className="btn-inverse">
-                      Suivre mon projet
+                    <Translate id="home.follow" />
                     </a>
                   </div>
                 </div>
@@ -115,20 +172,16 @@ class Home extends React.Component {
           <div className="xs-12" id="conseil">
             <div className="t-c">
               <h2 className="xs-10 xs-off-1">
-                Conseil en agriculture de précision
+              <Translate id="home.consulting"/>
               </h2>
               <p className="xs-10 xs-off-1 sm-8 sm-off-2">
-                Investiv est une entreprise Ivoirienne spécialisée dans le
-                conseil en matière d’agriculture de précision. Pionnière dans
-                l'utilisation des drones en agriculture en Afrique de l'Ouest,
-                nous fournissons à nos clients des solutions techniques et
-                innovantes alliant productivité, performance et gain de temps.
+                <Translate id="home.consultingText"/>
               </p>
 
               <div className="xs-12">
                 <div className="xs-12 sm-4 sm-off-4">
                   <button className="btn-inverse" id="apprende">
-                    Apprendre encore plus
+                    <Translate id="home.learnMore"/>
                   </button>
                 </div>
               </div>
@@ -142,10 +195,9 @@ class Home extends React.Component {
                           <img src={icon_a} />
                         </div>
                         <div className="xs-9">
-                          <h4> Précision </h4>
+                          <h4> <Translate id="home.precision"/> </h4>
                           <p>
-                            Obtenir des données plus précises sur l'état et les
-                            dimensions de votre terrain.
+                            O<Translate id="home.precisionText"/>
                           </p>
                         </div>
                       </div>
@@ -161,10 +213,9 @@ class Home extends React.Component {
                           <img src={icon_b} />
                         </div>
                         <div className="xs-9">
-                          <h4> Haute performance </h4>
+                          <h4> <Translate id="home.performance"/> </h4>
                           <p>
-                            Atteindre un niveau de performance supérieur aux
-                            normes actuelles
+                          <Translate id="home.performanceText"/>
                           </p>
                         </div>
                       </div>
@@ -180,10 +231,11 @@ class Home extends React.Component {
                           <img src={icon_c} />
                         </div>
                         <div className="xs-9">
-                          <h4> Gagner du temps </h4>
+                          <h4>  
+                            <Translate id="home.win"/>
+                          </h4>
                           <p>
-                            Gagnez du temps dans vos opérations agricoles avec
-                            des outils de haute technologie
+                            <Translate id="home.winText"/>
                           </p>
                         </div>
                       </div>
@@ -197,7 +249,7 @@ class Home extends React.Component {
 
         <section className="xs-10 xs-off-1 sm-10 sm-off-1">
           <div className="nos-services xs-12">
-            <h2 className="t-c"> Nos services</h2>
+            <h2 className="t-c">  <Translate id="home.service"/>  </h2>
 
             <div className="xs-12 m">
               <div className="xs-12 sm-6 l show-768">
@@ -209,12 +261,20 @@ class Home extends React.Component {
               </div>
 
               <div className="xs-12 sm-6">
-                <h4> {home.one.title} </h4>
-                <h5>{home.one.subTitle}</h5>
-                <p className="sm-12 xs-10">{home.one.description} </p>
+                <h4>  
+                  <Translate id="home.serviceOne"/>
+                </h4>
+                <h5>
+                  <Translate id="home.serviceOneSub"/>
+                </h5>
+               
+                <p className="sm-12 xs-10">
+                <Translate id="home.serviceOneText"/>
+               </p>
                 <div className="xs-12">
                   <NavLink to={home.one.link}>
-                    Apprendre encore plus
+                  <Translate id="home.learnMore"/>
+                         
                     <img src={right_arrow} className="arrow" />
                   </NavLink>
                 </div>
@@ -239,13 +299,21 @@ class Home extends React.Component {
               </div>
 
               <div className="xs-12 sm-6">
-                <h4> {home.two.title} </h4>
-                <h5>{home.two.subTitle} </h5>
-                <p className="sm-12 xs-10">{home.two.description} </p>
+                
+                <h4>  
+                  <Translate id="home.serviceTwo"/>
+                </h4>
+                <h5>
+                  <Translate id="home.serviceTwoSub"/>
+                </h5>
+               
+                <p className="sm-12 xs-10">
+                <Translate id="home.serviceTwoText"/>
+               </p>
                 <div className="xs-12">
                   <NavLink to={home.two.link}>
-                    Apprendre encore plus
-                    <img src={right_arrow} className="arrow" />
+                  <Translate id="home.learnMore"/>
+                  <img src={right_arrow} className="arrow" />
                   </NavLink>
                 </div>
               </div>
@@ -261,13 +329,20 @@ class Home extends React.Component {
               </div>
 
               <div className="xs-12 sm-6">
-                <h4> {home.three.title} </h4>
-                <h5> {home.three.subTitle} </h5>
-                <p className="sm-12 xs-10">{home.three.description} </p>
+              <h4>  
+                  <Translate id="home.serviceThree"/>
+                </h4>
+                <h5>
+                  <Translate id="home.serviceThreeSub"/>
+                </h5>
+               
+                <p className="sm-12 xs-10">
+                <Translate id="home.serviceThreeText"/>
+               </p>
                 <div className="xs-12">
                   <NavLink to={home.three.link}>
-                    Apprendre encore plus
-                    <img src={right_arrow} className="arrow" />
+                  <Translate id="home.learnMore"/>
+                  <img src={right_arrow} className="arrow" />
                   </NavLink>
                 </div>
               </div>
@@ -291,13 +366,20 @@ class Home extends React.Component {
               </div>
 
               <div className="xs-12 sm-6">
-                <h4>{home.four.title}</h4>
-                <h5>{home.four.subTitle}</h5>
-                <p className="sm-12 xs-10">{home.four.description}</p>
+              <h4>  
+                  <Translate id="home.serviceFour"/>
+                </h4>
+                <h5>
+                  <Translate id="home.serviceFourSub"/>
+                </h5>
+               
+                <p className="sm-12 xs-10">
+                <Translate id="home.serviceFourText"/>
+               </p>
                 <div className="xs-12">
                   <NavLink to={home.four.link}>
-                    Apprendre encore plus
-                    <img src={right_arrow} className="arrow" />
+                  <Translate id="home.learnMore"/>
+                   <img src={right_arrow} className="arrow" />
                   </NavLink>
                 </div>
               </div>
@@ -312,8 +394,7 @@ class Home extends React.Component {
                 <div className="c-w">
                   <div className="c">
                     <h3 className="xs-10 xs-off-1">
-                      Notre travail nous a valu la reconnaissance de ces
-                      partenaires de confiance
+                     <Translate id="home.someLogos"/>
                     </h3>
                   </div>
                 </div>
@@ -407,7 +488,7 @@ class Home extends React.Component {
 
         <section className="xs-12" id="just-more-logos">
           <div className="xs-12">
-            <h4> En vedette dans </h4>
+            <h4> <Translate id="home.someMoreLogos"/> </h4>
             <div className="xs-10 xs-off-1 ">
               <div className="xs-6 sm-4 md-3">
                 <LazyImage
@@ -473,7 +554,8 @@ class Home extends React.Component {
 
         {posts.length > 0 &&
         <section className="xs-12" id="blog">
-          <h2 className="t-c">Dernières nouvelles sur notre blog</h2>
+          <h2 className="t-c"><Translate id="home.blog"/></h2>
+
           <div className="xs-10 xs-off-1">
             {posts.map(post => (
               <div className="xs-12 sm-4 post-card" key={post.data.slug}>
@@ -500,23 +582,35 @@ class Home extends React.Component {
             ))}
           </div>
         </section>}
+        {
+          Boolean(this.state.galleryImages.length) &&
+            <section className="lightbox xs-12">
+              <div className="xs-12" id="blog">
+                <div className="t-c">
+                  <h2 className="t-c">Galerie</h2>
+                </div>
+              </div>   
+              <div className='xs-12 i-h'> 
+              <ImageGallery items={this.state.galleryImages} />
+              </div>
+            </section>
+        }
 
         <section className="xs-12" id="coffee">
           <div className="xs-12 sm-6 coffee-h">
             <div className="c-w">
               <div className="c">
                 <div className="xs-10 xs-off-1">
-                  <h2> Prêt à révolutionner votre production?</h2>
+                  <h2> <Translate id="home.revolution"/></h2>
                   <p>
-                    Vous pouvez commencer dès aujourd'hui et faire progresser
-                    vos opérations agricoles
+                  <Translate id="home.revolutionText"/>
                   </p>
                   <NavLink
                     className="btn-inverse"
                     id="nous"
                     to="#contactezNous"
                   >
-                    Contactez nous
+                    <Translate id="home.contact"/>
                   </NavLink>
                 </div>
               </div>
@@ -533,7 +627,7 @@ class Home extends React.Component {
 
         <section className="xs-12" id="just-more-logos">
           <div className="xs-12">
-            <h4> Prix ​​et distinctions </h4>
+            <h4> <Translate id="home.distinctions"/> </h4>
             <div className="xs-10 xs-off-1 sm-11">
               <div className="xs-6 sm-4 md-2">
                 <LazyImage
@@ -541,7 +635,7 @@ class Home extends React.Component {
                   <div className="imgPlaceholder" ref={ref} />)}
                 actual={({imageProps}) => (<img {...imageProps}/>)}
                 src={plogo1} className="xs-12 md-11" />
-                <p>Grand prix de la bpc du patronnat Ivoirien 2017</p>
+                <p><Translate id="home.awardOne"/></p>
               </div>
               <div className="xs-6 sm-4 md-2">
                 <LazyImage
@@ -549,7 +643,7 @@ class Home extends React.Component {
                   <div className="imgPlaceholder" ref={ref} />)}
                 actual={({imageProps}) => (<img {...imageProps}/>)}
                 src={plogo2} className="xs-12 md-11" />
-                <p>Prix de la fondation Tony Elumelu 2017</p>
+                <p><Translate id="home.awardTwo"/></p>
               </div>
               <div className="xs-6 sm-4 md-3">
                 <LazyImage
@@ -558,8 +652,7 @@ class Home extends React.Component {
                 actual={({imageProps}) => (<img {...imageProps}/>)}
                 src={plogo3} className="xs-12 md-11" />
                 <p>
-                  3ème prix au forum des start-up de l’école polytechnique de
-                  Paris en 2018
+                <Translate id="home.awardThree"/>
                 </p>
               </div>
               <div className="xs-6 sm-4 md-2">
@@ -568,7 +661,7 @@ class Home extends React.Component {
                   <div className="imgPlaceholder" ref={ref} />)}
                 actual={({imageProps}) => (<img {...imageProps}/>)}
                 src={plogo4} className="xs-12 md-11" />
-                <p>Prix du district d’Abidjan 2017</p>
+                <p><Translate id="home.awardFour"/></p>
               </div>
               <div className="xs-6 sm-4 md-2">
                 <LazyImage
@@ -577,8 +670,7 @@ class Home extends React.Component {
                 actual={({imageProps}) => (<img {...imageProps}/>)}
                 src={plogo5} className="xs-12 md-11" />
                 <p>
-                  1er Prix au forum de la BAD sur les jeunes agriculteurs
-                  (Agripitch) en 2018
+                <Translate id="home.awardFive"/>
                 </p>
               </div>
             </div>
@@ -589,5 +681,5 @@ class Home extends React.Component {
   }
 }
 
-let HomePage = withRouteData(withSiteData(Home));
+let HomePage = withRouteData(withSiteData(withLocalize(Home)));
 export default HomePage;

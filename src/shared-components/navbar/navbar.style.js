@@ -13,6 +13,16 @@ import styled from "styled-components";
 // `;
 
 export default styled.nav`
+
+select.selector{
+  padding: 0 1em;
+  border: 1px solid #eee;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 400;
+  width: 100%;
+}
+
   #logo-link {
     height: 100%;
     display: inline-block;
@@ -95,7 +105,10 @@ export default styled.nav`
   }
 
   .sm {
-    width: 20%;
+    width: calc(100%/6);
+    &.unique{
+      padding: 0 1em;
+    }
   }
 
   .btn {

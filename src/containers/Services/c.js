@@ -8,6 +8,7 @@ let ServiceWrapper = universal(import("./wrapper.js"), {
 ServiceWrapper.preload();
 
 import p_three from "../../assets/p_three.clean.jpeg";
+import { Translate } from "react-localize-redux";
 
 export default () => {
   return (
@@ -21,23 +22,17 @@ export default () => {
 
       <div className="xs-12 content">
         <div className="xs-10 xs-off-1 sm-8 sm-off-2">
-          <h3>Produisez sans stress</h3>
+          <h3><Translate id="services.three.heading"/></h3>
           <p>
-            Nous mettons à votre disposition des plantations « clé en main » sur
-            lesquelles nous vous accompagnons sur un nombre de cycles déterminé
-            afin de vous aider à cerner tous les contours d’une activité
-            agricole donnée et de prendre votre envol tout seul par la suite.
+           <Translate id="services.three.paragraph_one"/>
           </p>
-          <div className="xs-12 t-c">
+           <div className="xs-12 t-c">
             <img src={p_three} className="fit" />
           </div>
-
           <p>
-            C’est un package que nous vous offrons dans la mise en place de
-            votre exploitation jusqu’à la commercialisation finale de vos
-            produits. Tout le long de ce processus, nous vous permettons de
-            suivre à distance l’évolution des activités via notre site web.
+           <Translate id="services.four.paragraph_two"/>
           </p>
+         
         </div>
       </div>
     </ServiceWrapper>

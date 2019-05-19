@@ -11,6 +11,10 @@ import logo1 from "../../assets/footer-logos/placeholder.svg";
 import logo2 from "../../assets/footer-logos/smartphone.svg";
 import logo3 from "../../assets/footer-logos/phone.svg";
 import logo4 from "../../assets/footer-logos/whatsapp.svg";
+import { renderToStaticMarkup } from "react-dom/server";
+import { withLocalize } from "react-localize-redux";
+import globalTranslations from "../../translations/global.json";
+import { Translate } from "react-localize-redux";
 
 import request from 'axios';
 
@@ -21,12 +25,20 @@ const contactURL = process.env.REACT_STATIC_ENV === 'development' ?
   'http://localhost:8000/jsoncontact/' :
   'http://v1.investivgroup.com/jsoncontact/';
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       contactStatus: ''
     }
+    props.initialize({
+      languages: [
+        { name: "English", code: "en" },
+        { name: "French", code: "fr" }
+      ],
+      translation: globalTranslations,
+      options: { renderToStaticMarkup }
+    });
   }
   
   onContactChange = () => {
@@ -86,29 +98,29 @@ export default class Footer extends React.Component {
       <FooterStyle className="xs-12">
         <div className="xs-10 xs-off-1">
           <div className="xs-12 md-4">
-            <h4> COMPAGNIE </h4>
+            <h4> <Translate id="footer.compagnie"/> </h4>
 
             <ul className="xs-12">
               <li className="xs-12">
-                <NavLink to="/a-propos">A propos</NavLink>
+                <NavLink to="/a-propos"><Translate id="navbar.aboutus"/></NavLink>
               </li>
               <li className="xs-12 ">
-                <NavLink to="/nos-services">Nos services</NavLink>
+                <NavLink to="/nos-services"><Translate id="navbar.services"/></NavLink>
               </li>
               <li className="xs-12">
-                <NavLink to="/nos-actualités">Nos actualités</NavLink>
+                <NavLink to="/nos-actualités"><Translate id="home.blog"/></NavLink>
               </li>
 
               <li className="xs-12">
-                <a href={suiviURL} target="_blank">Suivre mon projet</a>
+                <a href={suiviURL} target="_blank"><Translate id="home.follow"/></a>
               </li>
               <li className="xs-12">
-                <a href="#contactezNous">Contactez nous</a>
+                <a href="#contactezNous"><Translate id="home.contact"/></a>
               </li>
             </ul>
           </div>
           <div className="xs-12 md-4" id="contactezNous">
-            <h4>CONTACTEZ NOUS</h4>
+            <h4><Translate id="navbar.contact"/></h4>
             <form onSubmit={this.envoyerMessage} className="xs-12">
               <div className="xs-12 form-group">
                 <input id="contact.nom" className="xs-12" required={true} ref={e => this.nom = e} name="name" placeholder="Nom"
@@ -230,3 +242,5 @@ export default class Footer extends React.Component {
     );
   }
 }
+
+export default withLocalize(Footer);

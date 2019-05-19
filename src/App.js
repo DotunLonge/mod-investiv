@@ -18,17 +18,22 @@ const Footer = universal(import(`./shared-components/footer`), {
 
 Navbar.preload();
 Footer.preload();
+import { LocalizeProvider } from "react-localize-redux";
 
 const App = () => (
+  <LocalizeProvider>
+
   <Router>
     <div className="content">
       <Navbar />
-      <div className="xs-12 push-down">
-        <Routes />
-      </div>
+        <div className={sessionStorage.getItem("isAuthenticated") === 'true' ? 'xs-12': 'push-down xs-12'}>
+          <Routes />
+        </div>
       <Footer />
     </div>
   </Router>
+  </LocalizeProvider>
+
 );
 
 export default hot(module)(App);

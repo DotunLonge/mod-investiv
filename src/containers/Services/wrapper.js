@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ServicesStyle from "../../styles/services.style";
 import { NavLink } from "react-static";
+import { Translate } from "react-localize-redux";
 
 class Services extends Component {
   render() {
@@ -9,7 +10,7 @@ class Services extends Component {
         <div className="xs-12 withBackground">
           <div className="c-w relative">
             <div className="c t-c">
-              <h3> Nos services </h3>
+              <h3> <Translate id="services.services"/> </h3>
             </div>
           </div>
         </div>
@@ -21,7 +22,7 @@ class Services extends Component {
                 activeClassName="active"
                 to="/nos-services/cartographie-aérienne-par-drone"
               >
-                Cartographie aérienne par drone
+                <Translate id="navbar.servicesOptions.one"/>
               </NavLink>
             </div>
 
@@ -30,8 +31,8 @@ class Services extends Component {
                 activeClassName="active"
                 to="/nos-services/diagnostic-phytosanitaire-par-drone"
               >
-                Diagnostic Phytosanitaire par drone
-              </NavLink>
+               <Translate id="navbar.servicesOptions.two"/>
+               </NavLink>
             </div>
 
             <div className="xs-12 sm-3">
@@ -39,7 +40,7 @@ class Services extends Component {
                 activeClassName="active"
                 to="/nos-services/gestion-intelligente-d’exploitation-agricole"
               >
-                Gestion intelligente d’exploitation agricole
+                <Translate id="navbar.servicesOptions.three"/>
               </NavLink>
             </div>
 
@@ -48,7 +49,7 @@ class Services extends Component {
                 activeClassName="active"
                 to="/nos-services/assistance-technique"
               >
-                Assistance technique
+                <Translate id="navbar.servicesOptions.four"/>
               </NavLink>
             </div>
           </div>

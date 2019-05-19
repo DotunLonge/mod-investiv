@@ -2,6 +2,7 @@ const fs = require("fs");
 const klaw = require("klaw");
 const path = require("path");
 const matter = require("gray-matter");
+require('dotenv').config();
 
 import { ServerStyleSheet } from "styled-components";
 import React, { Component } from "react";
@@ -89,6 +90,15 @@ export default {
 
     return [
       {
+        path: "/dashboard/gallery",
+        component: "src/containers/dashboard"
+      },
+      {
+        path: "/dashboard/team",
+        component: "src/containers/dashboard"
+      },
+      
+      {
         path: "/",
         component: "src/containers/Home",
         getData: () => ({
@@ -100,6 +110,10 @@ export default {
       {
         path: "/a-propos",
         component: "src/containers/About"
+      },
+      {
+        path: "/login",
+        component: "src/containers/Login"
       },
       {
         path: "/nos-services/",
@@ -178,8 +192,14 @@ export default {
 
             {renderMeta.styleTags}
             <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+            <script>
+              UPLOADCARE_PUBLIC_KEY = 'bf05bbda3e81c8a4f261'
+            </script>
+
           </Head>
           <Body>{children}</Body>
+    
+
         </Html>
       );
     }

@@ -6,7 +6,7 @@ let ServiceWrapper = universal(import("./wrapper.js"), {
   loading: () => null
 });
 ServiceWrapper.preload();
-
+import { Translate } from "react-localize-redux";
 import p_four from "../../assets/p_four.clean.jpeg";
 
 export default () => {
@@ -21,23 +21,16 @@ export default () => {
 
       <div className="xs-12 content">
         <div className="xs-10 xs-off-1 sm-8 sm-off-2">
-          <h3>Commencez, planifier et controler</h3>
+          <h3><Translate id="services.four.heading"/></h3>
           <p>
-            La conduite d’une exploitation agricole est soumise à plusieurs
-            aléas et il est important d’avoir une équipe qualifiée pour réaliser
-            des études techniques, des audits techniques, d’encadrer les
-            producteurs ou de faire des recommandations pour améliorer la tenue
-            de votre exploitation ou d’un projet agricole.
+           <Translate id="services.four.paragraph_one"/>
           </p>
           <div className="xs-12 t-c">
             <img src={p_four} className="fit" />
           </div>
 
           <p>
-            Pour répondre à toutes ces préoccupations, nous avons développé un
-            service d’assistance technique tailler sur mesure en fonction des
-            réalités de nos clients afin de répondre efficacement à leurs
-            besoins.
+          <Translate id="services.four.paragraph_two"/>
           </p>
         </div>
       </div>
