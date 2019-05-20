@@ -174,8 +174,14 @@ class Footer extends React.Component {
                 <img src={logo1} />
               </div>
               <div className="xs-10 sm-9">
-                <h4>Investiv - Côte d'Ivoire </h4>
-                <p>Cocody, 2-Plateaux Vallons Abidjan</p>
+                <h4>Abidjan, Côte d'Ivoire</h4>
+                <p>72QG+H4 Abidjan, Côte d'Ivoire</p>
+
+                <a style = {{
+                      margin: "1em 0",
+                      display: "block",
+                      textDecoration: 'none'
+                }} href="https://www.google.com/maps/place/INVESTIV+C%C3%94TE+D'IVOIRE/@5.2889148,-3.9768324,17z/data=!3m1!4b1!4m5!3m4!1s0xfc1eb605c7cd4ff:0xaa3a0df17575f6bb!8m2!3d5.2889148!4d-3.9746437?hl=fr-CI" target="_blank" rel='noreferrer noopenner'>View Our Address</a>
               </div>
             </div>
 
