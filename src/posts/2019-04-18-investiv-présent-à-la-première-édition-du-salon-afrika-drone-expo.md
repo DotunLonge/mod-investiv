@@ -2,7 +2,7 @@
 layout: blog
 title: Investiv présent à la première édition du salon Afrika Drone Expo
 date: '2019-04-18T21:16:38+00:00'
-thumbnail: /uploads/carte-invitation_salon-drone.jpg
+thumbnail: /uploads/ellipse.png
 external: false
 link: ''
 ---
